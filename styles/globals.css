@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "M PLUS Rounded 1c", "Nanum Gothic", sans-serif;
+    @apply leading-normal tracking-wide text-gray-900;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+    @apply my-2;
+}
