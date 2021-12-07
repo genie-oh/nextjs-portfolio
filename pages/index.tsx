@@ -1,36 +1,43 @@
-import Link from "next/link";
 import HomeContext from "../components/Context/HomeContext";
-import i18nData from "../i18n/i18nData";
-import { I_i18n } from "../i18n/Types/I_i18n";
+
+import WaveDividerBottom from "../components/WaveDivider/WaveDividerBottom";
+import WaveDividerTop from "../components/WaveDivider/WaveDividerTop";
 
 export default function Home() {
-    const test_i18n: I_i18n<string> = {
-        ja: "こんにちは!",
-        ko: "안녕하세요!",
-        en: "Hello!",
-    };
-
+    const clSection = "relative bg-blue-300 h-screen flex justify-center items-center";
     return (
         <HomeContext.Provider value={{}}>
-            <ul>
-                <li>
-                    <Link href="/" locale="ja">
-                        ja
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/" locale="ko">
-                        ko
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/" locale="en">
-                        en
-                    </Link>
-                </li>
-            </ul>
-            <div className="bg-blue-100">
-                <p>{i18nData(test_i18n)}</p>
+            <div>
+                {/* GlobalMenu */}
+                <div>
+                    <main>
+                        <section className={clSection}>
+                            TOP
+                            <WaveDividerBottom />
+                        </section>
+                        <section className={clSection}>SalesPoint</section>
+                        <section className={clSection}>
+                            <WaveDividerTop />
+                            AboutMe
+                            <WaveDividerBottom />
+                        </section>
+                        <section className={clSection}>Works</section>
+                        <section className={clSection}>
+                            <WaveDividerTop />
+                            Carrers
+                            <WaveDividerBottom />
+                        </section>
+                        <section className={clSection}>Articles</section>
+                        <section className={clSection}>
+                            <WaveDividerTop />
+                            ContactMe
+                        </section>
+
+                        <section className="h-16 text-white bg-gray-700">FooterSection</section>
+                        {/* Sections */}
+                        {/* SectionFooter */}
+                    </main>
+                </div>
             </div>
         </HomeContext.Provider>
     );
