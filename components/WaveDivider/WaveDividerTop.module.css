@@ -1,0 +1,26 @@
+.divider {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    @apply h-16;
+}
+
+.shapeFill {
+    fill: #ffd000;
+}
+
+@screen md {
+    .svg {
+        @apply h-32;
+    }
+}
