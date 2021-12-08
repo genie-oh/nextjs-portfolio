@@ -2,6 +2,7 @@ import HomeContext from "../components/Context/HomeContext";
 import Section from "../components/Section";
 import SalesPoint from "../components/SectionChild/SalesPoint";
 import Top from "../components/SectionChild/Top";
+import SectionFooter from "../components/SectionFooter";
 
 import WaveDividerBottom from "../components/WaveDivider/WaveDividerBottom";
 import WaveDividerTop from "../components/WaveDivider/WaveDividerTop";
@@ -45,7 +46,7 @@ export default function Home() {
                             <div className="h-96">Contact Me</div>
                         </Section>
 
-                        <section className="h-16 text-white bg-gray-700">FooterSection</section>
+                        <SectionFooter />
                     </main>
                 </div>
             </div>
