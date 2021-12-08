@@ -1,5 +1,6 @@
 import HomeContext from "../components/Context/HomeContext";
 import Section from "../components/Section";
+import SalesPoint from "../components/SectionChild/SalesPoint";
 import Top from "../components/SectionChild/Top";
 
 import WaveDividerBottom from "../components/WaveDivider/WaveDividerBottom";
@@ -21,7 +22,7 @@ export default function Home() {
                             <WaveDividerBottom />
                         </Section>
                         <Section id="SEC-SALESPOINT" title="My Sales Point" style={styleSectionA}>
-                            <div className="h-96">My Sales Point</div>
+                            <SalesPoint />
                         </Section>
                         <Section id="SEC-ABOUTME" title="About Me" style={styleSectionB}>
                             <WaveDividerTop />

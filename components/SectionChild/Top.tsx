@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import i18nData from "../../i18n/i18nData";
 
-import { languageList } from "../../datas/LanguageList";
+import { languageList } from "../../datas/languageList";
 
 const Top = () => {
     return (
