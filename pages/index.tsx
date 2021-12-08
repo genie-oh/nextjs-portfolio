@@ -8,16 +8,29 @@ import WaveDividerBottom from "../components/WaveDivider/WaveDividerBottom";
 import WaveDividerTop from "../components/WaveDivider/WaveDividerTop";
 
 export default function Home() {
+    const HomeContextFunctions: { scrollTo: Function } = (function (document) {
+        function scrollTo(id: string) {
+            document.getElementById("page-contents").scrollTo({
+                top: document.getElementById(id).offsetTop,
+                behavior: "smooth",
+            });
+        }
+
+        return {
+            scrollTo: scrollTo,
+        };
+    })(document);
+
     const styleSectionTop = { background: "linear-gradient(29deg, rgba(249,86,179,1) 0%, rgba(240,111,76,1) 100%)" };
     const styleSectionA = { background: "#FFD000" };
     const styleSectionB = { background: "#FFEFCA" };
 
     return (
-        <HomeContext.Provider value={{}}>
+        <HomeContext.Provider value={{ HomeContextFunctions }}>
             <div>
                 {/* GlobalMenu */}
                 <div>
-                    <main>
+                    <main id="page-contents" className="h-screen overflow-y-auto">
                         <Section id="SEC-TOP" className="h-screen" style={styleSectionTop}>
                             <Top />
                             <WaveDividerBottom />
