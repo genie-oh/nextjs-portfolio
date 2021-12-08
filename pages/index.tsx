@@ -2,21 +2,35 @@ import HomeContext from "../components/Context/HomeContext";
 import Section from "../components/Section";
 import SalesPoint from "../components/SectionChild/SalesPoint";
 import Top from "../components/SectionChild/Top";
+import SectionFooter from "../components/SectionFooter";
 
 import WaveDividerBottom from "../components/WaveDivider/WaveDividerBottom";
 import WaveDividerTop from "../components/WaveDivider/WaveDividerTop";
 
 export default function Home() {
+    const HomeContextFunctions: { scrollTo: Function } = (function (document) {
+        function scrollTo(id: string) {
+            document.getElementById("page-contents").scrollTo({
+                top: document.getElementById(id).offsetTop,
+                behavior: "smooth",
+            });
+        }
+
+        return {
+            scrollTo: scrollTo,
+        };
+    })(document);
+
     const styleSectionTop = { background: "linear-gradient(29deg, rgba(249,86,179,1) 0%, rgba(240,111,76,1) 100%)" };
     const styleSectionA = { background: "#FFD000" };
     const styleSectionB = { background: "#FFEFCA" };
 
     return (
-        <HomeContext.Provider value={{}}>
+        <HomeContext.Provider value={{ HomeContextFunctions }}>
             <div>
                 {/* GlobalMenu */}
                 <div>
-                    <main>
+                    <main id="page-contents" className="h-screen overflow-y-auto">
                         <Section id="SEC-TOP" className="h-screen" style={styleSectionTop}>
                             <Top />
                             <WaveDividerBottom />
@@ -45,7 +59,7 @@ export default function Home() {
                             <div className="h-96">Contact Me</div>
                         </Section>
 
-                        <section className="h-16 text-white bg-gray-700">FooterSection</section>
+                        <SectionFooter />
                     </main>
                 </div>
             </div>
