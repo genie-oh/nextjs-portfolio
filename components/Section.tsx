@@ -9,8 +9,8 @@ const Section: FunctionComponent<{
 }> = ({ id, title = null, className = "", style = {}, children = null }) => {
     return (
         <section id={id} className={"relative w-full " + className} style={style}>
-            <div className="py-10 mx-auto overflow-hidden bg-gray-600 max-w-screen-2xl md:py-32">
-                {title && <h1 className="w-full mb-5 text-3xl font-bold text-center md:text-5xl md:mb-24">{title}</h1>}
+            <div className="h-full py-10 mx-auto overflow-hidden border-2 max-w-screen-2xl xl:py-32">
+                {title && <h1 className="w-full mb-5 text-3xl font-bold text-center lg:text-5xl xl:mb-24">{title}</h1>}
                 {children && children}
             </div>
         </section>
