@@ -1,41 +1,49 @@
 import HomeContext from "../components/Context/HomeContext";
+import Section from "../components/Section";
 
 import WaveDividerBottom from "../components/WaveDivider/WaveDividerBottom";
 import WaveDividerTop from "../components/WaveDivider/WaveDividerTop";
 
 export default function Home() {
-    const clSection = "relative bg-blue-300 h-screen flex justify-center items-center";
+    const styleSectionTop = { background: "linear-gradient(29deg, rgba(249,86,179,1) 0%, rgba(240,111,76,1) 100%)" };
+    const styleSectionA = { background: "#FFD000" };
+    const styleSectionB = { background: "#FFEFCA" };
+
     return (
         <HomeContext.Provider value={{}}>
             <div>
                 {/* GlobalMenu */}
                 <div>
                     <main>
-                        <section className={clSection}>
+                        <Section id="SEC-TOP" title="TOP" className="h-screen" style={styleSectionTop}>
                             TOP
                             <WaveDividerBottom />
-                        </section>
-                        <section className={clSection}>SalesPoint</section>
-                        <section className={clSection}>
+                        </Section>
+                        <Section id="SEC-SALESPOINT" title="My Sales Point" style={styleSectionA}>
+                            <div className="h-96">My Sales Point</div>
+                        </Section>
+                        <Section id="SEC-ABOUTME" title="About Me" style={styleSectionB}>
                             <WaveDividerTop />
-                            AboutMe
+                            <div className="h-96">About Me</div>
                             <WaveDividerBottom />
-                        </section>
-                        <section className={clSection}>Works</section>
-                        <section className={clSection}>
+                        </Section>
+                        <Section id="SEC-WORKS" title="Works" style={styleSectionA}>
+                            <div className="h-96">Works</div>
+                        </Section>
+                        <Section id="SEC-CAREERS" title="Careers" style={styleSectionB}>
                             <WaveDividerTop />
-                            Carrers
+                            <div className="h-96">Careers</div>
                             <WaveDividerBottom />
-                        </section>
-                        <section className={clSection}>Articles</section>
-                        <section className={clSection}>
+                        </Section>
+                        <Section id="SEC-ARTICLES" title="Articles" style={styleSectionA}>
+                            <div className="h-96">Articles</div>
+                        </Section>
+                        <Section id="SEC-CONTACTME" title="Contact Me" style={styleSectionB}>
                             <WaveDividerTop />
-                            ContactMe
-                        </section>
+                            <div className="h-96">Contact Me</div>
+                        </Section>
 
                         <section className="h-16 text-white bg-gray-700">FooterSection</section>
-                        {/* Sections */}
-                        {/* SectionFooter */}
                     </main>
                 </div>
             </div>
