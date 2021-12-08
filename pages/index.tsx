@@ -1,5 +1,6 @@
 import HomeContext from "../components/Context/HomeContext";
 import Section from "../components/Section";
+import Top from "../components/SectionChild/Top";
 
 import WaveDividerBottom from "../components/WaveDivider/WaveDividerBottom";
 import WaveDividerTop from "../components/WaveDivider/WaveDividerTop";
@@ -15,8 +16,8 @@ export default function Home() {
                 {/* GlobalMenu */}
                 <div>
                     <main>
-                        <Section id="SEC-TOP" title="TOP" className="h-screen" style={styleSectionTop}>
-                            TOP
+                        <Section id="SEC-TOP" className="h-screen" style={styleSectionTop}>
+                            <Top />
                             <WaveDividerBottom />
                         </Section>
                         <Section id="SEC-SALESPOINT" title="My Sales Point" style={styleSectionA}>
