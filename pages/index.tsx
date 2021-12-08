@@ -1,4 +1,5 @@
 import HomeContext from "../components/Context/HomeContext";
+import { GlobalMenu } from "../components/GlobalMenu";
 import Section from "../components/Section";
 import SalesPoint from "../components/SectionChild/SalesPoint";
 import Top from "../components/SectionChild/Top";
@@ -8,7 +9,7 @@ import WaveDividerBottom from "../components/WaveDivider/WaveDividerBottom";
 import WaveDividerTop from "../components/WaveDivider/WaveDividerTop";
 
 export default function Home() {
-    const HomeContextFunctions: { scrollTo: Function } = (function (document) {
+    const HomeContextFunctions: { scrollTo: Function } = (function () {
         function scrollTo(id: string) {
             document.getElementById("page-contents").scrollTo({
                 top: document.getElementById(id).offsetTop,
@@ -19,7 +20,7 @@ export default function Home() {
         return {
             scrollTo: scrollTo,
         };
-    })(document);
+    })();
 
     const styleSectionTop = { background: "linear-gradient(29deg, rgba(249,86,179,1) 0%, rgba(240,111,76,1) 100%)" };
     const styleSectionA = { background: "#FFD000" };
@@ -27,9 +28,9 @@ export default function Home() {
 
     return (
         <HomeContext.Provider value={{ HomeContextFunctions }}>
-            <div>
-                {/* GlobalMenu */}
-                <div>
+            <div id="outer-container" className="bg-gray-700">
+                <GlobalMenu />
+                <div id="page-wrap" className="relative h-screen overflow-hidden">
                     <main id="page-contents" className="h-screen overflow-y-auto">
                         <Section id="SEC-TOP" className="h-screen" style={styleSectionTop}>
                             <Top />
