@@ -1,4 +1,4 @@
-import ImageTextCard from "../Parts/ImageTextCard";
+import ImageTextCard from "../CommonParts/ImageTextCard";
 
 import i18nData from "../../i18n/i18nData";
 import { dataMySalesPoint } from "../../datas/dataMySalesPoint";
