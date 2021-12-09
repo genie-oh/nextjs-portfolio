@@ -1,6 +1,7 @@
 import HomeContext from "../components/Context/HomeContext";
 import { GlobalMenu } from "../components/GlobalMenu";
 import Section from "../components/Section";
+import AboutMe from "../components/SectionChild/AboutMe";
 import SalesPoint from "../components/SectionChild/SalesPoint";
 import Top from "../components/SectionChild/Top";
 import SectionFooter from "../components/SectionFooter";
@@ -41,7 +42,7 @@ export default function Home() {
                         </Section>
                         <Section id="SEC-ABOUTME" title="About Me" style={styleSectionB}>
                             <WaveDividerTop />
-                            <div className="h-96">About Me</div>
+                            <AboutMe />
                             <WaveDividerBottom />
                         </Section>
                         <Section id="SEC-WORKS" title="Works" style={styleSectionA}>
