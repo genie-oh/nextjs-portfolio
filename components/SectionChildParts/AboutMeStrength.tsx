@@ -4,9 +4,29 @@ import DistributionBarChart from "./AboutMeStrength/DistributionBarChart";
 import ScoreRadial from "./AboutMeStrength/ScoreRadial";
 import Signature from "./AboutMeStrength/Signature";
 
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { variantsRevealFromBotoom } from "../../motions/variantsRevealFromBottom";
+
 const AboutMeStrength = () => {
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
+
+    useEffect(() => {
+        if (inView) {
+            controls.start("animate");
+        }
+    }, [controls, inView]);
+
     return (
-        <div className="relative p-5 m-5 mt-10 bg-white shadow-2xl md:m-10 rounded-xl">
+        <motion.div
+            ref={ref}
+            variants={variantsRevealFromBotoom}
+            initial="initial"
+            animate={controls}
+            className="relative p-5 m-5 mt-10 bg-white shadow-2xl md:m-10 rounded-xl"
+        >
             <div className="flex items-center justify-center w-auto py-2 mb-3 -mt-10 text-lg font-bold text-center bg-yellow-300 rounded-full md:text-2xl md:px-5 md:mx-10">
                 <span className="pr-3">My CliftonStrengths 34 Report</span>
             </div>
@@ -37,7 +57,7 @@ const AboutMeStrength = () => {
                 <div className="w-full font-bold text-center">CliftonStrengths 34 Radar</div>
                 <ScoreRadial />
             </div>
-        </div>
+        </motion.div>
     );
 };
 
