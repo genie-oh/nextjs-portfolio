@@ -31,9 +31,7 @@ const AboutMeStrength = () => {
                 </div>
 
                 <div className="w-full mb-1 font-bold text-center">My Signatures</div>
-                <div className="flex flex-wrap items-center justify-center pb-2 mb-5 border-b-2">
-                    <Signature />
-                </div>
+                <Signature />
 
                 <div className="w-full font-bold text-center">CliftonStrengths 34 Radar</div>
                 <div className="w-full -mb-10" style={{ height: "350px" }}>
