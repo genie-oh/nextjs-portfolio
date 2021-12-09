@@ -1,6 +1,7 @@
 import i18nData from "../../i18n/i18nData";
 
 import DistributionBarChart from "./AboutMeStrength/DistributionBarChart";
+import Signature from "./AboutMeStrength/Signature";
 
 const AboutMeStrength = () => {
     return (
@@ -31,7 +32,7 @@ const AboutMeStrength = () => {
 
                 <div className="w-full mb-1 font-bold text-center">My Signatures</div>
                 <div className="flex flex-wrap items-center justify-center pb-2 mb-5 border-b-2">
-                    <div className="text-center text-red-500">tags</div>
+                    <Signature />
                 </div>
 
                 <div className="w-full font-bold text-center">CliftonStrengths 34 Radar</div>
