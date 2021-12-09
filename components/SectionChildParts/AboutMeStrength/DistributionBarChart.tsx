@@ -37,7 +37,7 @@ const DistributionBarChart = () => {
                                             className={`w-24 flex flex-col items-center justify-center p-2 m-1 bg-${item.colorType}-${colorLevel} ${textClass}`}
                                         >
                                             <span>{subItem.no}</span>
-                                            <span className="break-word">{i18nData(subItem.text_i18n)}</span>
+                                            <span className="break-all">{i18nData(subItem.text_i18n)}</span>
                                         </div>
                                     );
                                 })}
