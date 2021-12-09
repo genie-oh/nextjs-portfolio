@@ -1,5 +1,7 @@
 import i18nData from "../../i18n/i18nData";
 
+import DistributionBarChart from "./AboutMeStrength/DistributionBarChart";
+
 const AboutMeStrength = () => {
     return (
         <div className="relative p-5 m-5 mt-10 bg-white shadow-2xl md:m-10 rounded-xl">
@@ -18,7 +20,7 @@ const AboutMeStrength = () => {
 
             <div>
                 <div className="w-full mb-1 font-bold text-center">Relative Distribution & Domain</div>
-                <div className="text-center text-red-500">--distribution bar graph--</div>
+                <DistributionBarChart />
                 <div className="w-full pb-2 mb-3 text-sm italic text-center text-gray-500 whitespace-pre-wrap border-b-2">
                     {i18nData({
                         ja: "あなたは、クリフトンストレングスの「戦略的思考力」つの資質に強みがあります。\n優れた「戦略的思考力」を備えたリーダーは、皆を未来にできることに集中させます。 このようなリーダーは、絶えず情報を取り入れ、分析して、チームがよりよい意志決定を下せるようにします。 これに長けているリーダーは、将来に対する私たちの考えを先へ先へと広げ伸ばします。",
