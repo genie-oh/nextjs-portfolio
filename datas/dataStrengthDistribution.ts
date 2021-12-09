@@ -106,6 +106,14 @@ export const dataStrengthDistribution: I_Distribution[] = [
                 },
             },
             {
+                no: 5,
+                text_i18n: {
+                    ja: "個別化(Individualization)",
+                    ko: "개별화(Individualization)테마",
+                    en: "Individualization",
+                },
+            },
+            {
                 no: 14,
                 text_i18n: {
                     ja: "成長促進(Developer)",
