@@ -1,6 +1,7 @@
 import i18nData from "../../i18n/i18nData";
 
 import DistributionBarChart from "./AboutMeStrength/DistributionBarChart";
+import ScoreRadial from "./AboutMeStrength/ScoreRadial";
 import Signature from "./AboutMeStrength/Signature";
 
 const AboutMeStrength = () => {
@@ -34,9 +35,7 @@ const AboutMeStrength = () => {
                 <Signature />
 
                 <div className="w-full font-bold text-center">CliftonStrengths 34 Radar</div>
-                <div className="w-full -mb-10" style={{ height: "350px" }}>
-                    <div className="text-center text-red-500">radial graph</div>
-                </div>
+                <ScoreRadial />
             </div>
         </div>
     );
