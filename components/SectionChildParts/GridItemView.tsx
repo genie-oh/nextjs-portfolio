@@ -1,16 +1,17 @@
+import { FunctionComponent } from "react";
 import { MdMoreHoriz } from "react-icons/md";
-
+import { I_Article } from "../../datas/types/I_Article";
 import Item from "./GridItemView/Item";
 
-const GridItemView = () => {
+const GridItemView: FunctionComponent<{
+    articleDatas: I_Article[];
+}> = ({ articleDatas }) => {
     return (
         <div className="flex flex-col items-center justify-center m-5 md:m-10">
             <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
-                {Array(9)
-                    .fill(1)
-                    .map((item, idx) => {
-                        return <Item />;
-                    })}
+                {articleDatas.map((articleData, idx) => {
+                    return <Item key={idx} articleData={articleData} />;
+                })}
             </div>
 
             <div className="relative w-full mt-10">
