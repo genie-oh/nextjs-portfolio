@@ -4,6 +4,7 @@ import Section from "../components/Section";
 import AboutMe from "../components/SectionChild/AboutMe";
 import SalesPoint from "../components/SectionChild/SalesPoint";
 import Top from "../components/SectionChild/Top";
+import Works from "../components/SectionChild/Works";
 import SectionFooter from "../components/SectionFooter";
 
 import WaveDividerBottom from "../components/WaveDivider/WaveDividerBottom";
@@ -46,7 +47,7 @@ export default function Home() {
                             <WaveDividerBottom />
                         </Section>
                         <Section id="SEC-WORKS" title="Works" style={styleSectionA}>
-                            <div className="h-96">Works</div>
+                            <Works />
                         </Section>
                         <Section id="SEC-CAREERS" title="Careers" style={styleSectionB}>
                             <WaveDividerTop />
