@@ -48,8 +48,7 @@ const Item: FunctionComponent<{
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
-                // style={customStyles}
-                contentLabel="title"
+                contentLabel={i18nData(articleData.title_i18n)}
                 ariaHideApp={false}
                 className="w-full h-full bg-red-300 bg-opacity-80"
                 style={{
@@ -59,7 +58,7 @@ const Item: FunctionComponent<{
                     },
                 }}
             >
-                <ModalContent handlerCloseModal={closeModal} />
+                <ModalContent handlerCloseModal={closeModal} articleData={articleData} />
             </Modal>
         </div>
     );
