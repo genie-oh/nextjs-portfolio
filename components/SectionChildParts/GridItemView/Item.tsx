@@ -1,12 +1,22 @@
+import { useState } from "react";
+import Modal from "react-modal";
+
+import ModalContent from "./ModalContent";
+
 const Item = () => {
+    const [modalIsOpen, setIsOpen] = useState(false);
+
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
+
     return (
         <div className="relative bg-white shadow-lg cursor-pointer rounded-2xl">
-            <div
-                className="w-full h-full"
-                onClick={() => {
-                    alert(1);
-                }}
-            >
+            <div className="w-full h-full" onClick={openModal}>
                 <div className="relative w-full h-64 overflow-hidden bg-gray-300 rounded-t-2xl">
                     <img src="/img/common/top.svg" className="object-cover w-full h-full" />
                     <p className="absolute bottom-0.5 flex flex-wrap p-1 text-xs text-white max-w-max">category</p>
@@ -22,6 +32,23 @@ const Item = () => {
                     </div>
                 </div>
             </div>
+
+            <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                // style={customStyles}
+                contentLabel="title"
+                ariaHideApp={false}
+                className="w-full h-full bg-red-300 bg-opacity-80"
+                style={{
+                    overlay: {
+                        zIndex: 9999,
+                        backgroundColor: "transparent",
+                    },
+                }}
+            >
+                <ModalContent handlerCloseModal={closeModal} />
+            </Modal>
         </div>
     );
 };
