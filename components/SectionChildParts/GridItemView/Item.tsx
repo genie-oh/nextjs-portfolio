@@ -1,5 +1,5 @@
 import React from "react";
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent, useState, useEffect } from "react";
 import Modal from "react-modal";
 import { I_Article } from "../../../datas/types/I_Article";
 import i18nData from "../../../i18n/i18nData";
@@ -7,9 +7,24 @@ import i18nData from "../../../i18n/i18nData";
 import HomeContext from "../../Context/HomeContext";
 import ModalContent from "./ModalContent";
 
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
+import { variantsRevealFromBotoom } from "../../../motions/variantsRevealFromBottom";
+
 const Item: FunctionComponent<{
     articleData: I_Article;
 }> = ({ articleData }) => {
+    //-- motion prepare
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
+
+    useEffect(() => {
+        if (inView) {
+            controls.start("animate");
+        }
+    }, [controls, inView]);
+
+    //-- modal control prepare
     const homeContext = React.useContext(HomeContext);
     const [modalIsOpen, setIsOpen] = useState(false);
 
@@ -26,7 +41,14 @@ const Item: FunctionComponent<{
     }
 
     return (
-        <div className="relative bg-white shadow-lg cursor-pointer rounded-2xl">
+        <motion.div
+            ref={ref}
+            variants={variantsRevealFromBotoom}
+            initial="initial"
+            animate={controls}
+            whileHover={{ scale: 1.05 }}
+            className="relative bg-white shadow-lg cursor-pointer rounded-2xl"
+        >
             <div className="w-full h-full" onClick={openModal}>
                 <div className="relative w-full h-64 overflow-hidden bg-gray-300 rounded-t-2xl">
                     <img src={articleData.imgUrl} className="object-cover w-full h-full" />
@@ -67,7 +89,7 @@ const Item: FunctionComponent<{
             >
                 <ModalContent handlerCloseModal={closeModal} articleData={articleData} />
             </Modal>
-        </div>
+        </motion.div>
     );
 };
 
