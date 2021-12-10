@@ -4,13 +4,19 @@ import { MdClose } from "react-icons/md";
 import { I_Article } from "../../../datas/types/I_Article";
 import i18nData from "../../../i18n/i18nData";
 
+import { motion } from "framer-motion";
+import { variantsRevealFromBotoom } from "../../../motions/variantsRevealFromBottom";
+
 const ModalContent: FunctionComponent<{
     handlerCloseModal: MouseEventHandler;
     articleData: I_Article;
 }> = ({ handlerCloseModal, articleData }) => {
     return (
         <div className="w-full h-full overflow-y-auto leading-7 bg-black bg-opacity-70" onClick={handlerCloseModal}>
-            <div
+            <motion.div
+                variants={variantsRevealFromBotoom}
+                initial="initial"
+                animate="animate"
                 className="relative w-11/12 min-h-screen mx-auto my-24 bg-white md:w-2/3 2xl:w-1/2 rounded-2xl"
                 onClick={(e) => {
                     e.stopPropagation();
@@ -62,7 +68,7 @@ const ModalContent: FunctionComponent<{
                         <MdClose fontSize={36} />
                     </button>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 };
