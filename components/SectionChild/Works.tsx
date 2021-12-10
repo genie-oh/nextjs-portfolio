@@ -1,5 +1,7 @@
+import GridItemView from "../SectionChildParts/GridItemView";
+
 const Works = () => {
-    return <div>works!</div>;
+    return <GridItemView />;
 };
 
 export default Works;
