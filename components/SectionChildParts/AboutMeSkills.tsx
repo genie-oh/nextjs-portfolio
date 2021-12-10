@@ -1,3 +1,8 @@
+import { CircularProgressbarWithChildren, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+
+import { FcServices } from "react-icons/fc";
+
 const AboutMeSkills = () => {
     return (
         <div className="flex flex-col items-center justify-start m-5 lg:px-10 lg:m-10 lg:flex-1">
@@ -12,7 +17,21 @@ const AboutMeSkills = () => {
                             return (
                                 <div className="grid items-start grid-cols-3 my-6 md:grid-cols-5">
                                     <div className="w-20 h-20 mx-auto text-purple-600 lg:w-24 lg:h-24">
-                                        <div className="w-16 h-16 bg-red-300 rounded-full"></div>
+                                        <CircularProgressbarWithChildren
+                                            value={80}
+                                            strokeWidth={10}
+                                            background
+                                            styles={buildStyles({
+                                                pathColor: "rgba(124, 58, 232, 1)",
+                                                backgroundColor: "rgba(255,255,255,1)",
+                                            })}
+                                        >
+                                            <FcServices className="mb-1 text-4xl text-purple-600" />
+                                            <span className="text-xs">
+                                                {80}
+                                                <span className="text-xs"></span>
+                                            </span>
+                                        </CircularProgressbarWithChildren>
                                     </div>
                                     <div className="col-span-2 pl-2 md:col-span-4 lg:px-8">
                                         <p className="font-bold rounded-full">title</p>
