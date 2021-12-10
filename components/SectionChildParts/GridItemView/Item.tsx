@@ -1,5 +1,29 @@
 const Item = () => {
-    return <div className="h-64 text-center bg-red-300">Item</div>;
+    return (
+        <div className="relative bg-white shadow-lg cursor-pointer rounded-2xl">
+            <div
+                className="w-full h-full"
+                onClick={() => {
+                    alert(1);
+                }}
+            >
+                <div className="relative w-full h-64 overflow-hidden bg-gray-300 rounded-t-2xl">
+                    <img src="/img/common/top.svg" className="object-cover w-full h-full" />
+                    <p className="absolute bottom-0.5 flex flex-wrap p-1 text-xs text-white max-w-max">category</p>
+                </div>
+                <div className="px-5 py-1 mt-3 mb-10">
+                    <p className="mb-2 text-lg font-bold">title</p>
+                    <p className="pb-5 mb-3 text-sm text-gray-500">text</p>
+                </div>
+                <div className="absolute bottom-0 w-full px-5">
+                    <div className="flex items-center justify-between py-3 border-t-2">
+                        <p className="text-xs">date</p>
+                        <button className="px-5 py-1 text-white bg-blue-500 rounded-full">read more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 };
 
 export default Item;
