@@ -1,4 +1,12 @@
+import WorksDanalBackend from "../components/SectionWorksDetail/WorksDanalBackend";
+import WorksDanalCaptcha from "../components/SectionWorksDetail/WorksDanalCaptcha";
+import WorksDanalKeyboard from "../components/SectionWorksDetail/WorksDanalKeyboard";
+import WorksDanalWeb from "../components/SectionWorksDetail/WorksDanalWeb";
+import WorksOzvisionComic from "../components/SectionWorksDetail/WorksOzvisionComic";
 import WorksOzvisionHapitas from "../components/SectionWorksDetail/WorksOzvisionHapitas";
+import WorksUnivNetflow from "../components/SectionWorksDetail/WorksUnivNetflow";
+import WorksUnivNetwork from "../components/SectionWorksDetail/WorksUnivNetwork";
+import WorksUnivThesis from "../components/SectionWorksDetail/WorksUnivThesis";
 import { I_Article } from "./types/I_Article";
 
 export const dataWorks: I_Article[] = [
@@ -53,7 +61,7 @@ export const dataWorks: I_Article[] = [
         },
         date: "2018.6 ~ 2019.12",
         moreContentType: "modal",
-        moreContentModalComponent: WorksOzvisionHapitas,
+        moreContentModalComponent: WorksOzvisionComic,
     },
     {
         imgUrl: "/img/works/virtualkeyboard.png",
@@ -70,7 +78,7 @@ export const dataWorks: I_Article[] = [
         },
         date: "2014.2 ~ 2015.8",
         moreContentType: "modal",
-        moreContentModalComponent: WorksOzvisionHapitas,
+        moreContentModalComponent: WorksDanalKeyboard,
     },
     {
         imgUrl: "/img/works/danal_backend.png",
@@ -87,7 +95,7 @@ export const dataWorks: I_Article[] = [
         },
         date: "2016.1  ~ 2017.9",
         moreContentType: "modal",
-        moreContentModalComponent: WorksOzvisionHapitas,
+        moreContentModalComponent: WorksDanalBackend,
     },
     {
         imgUrl: "/img/works/danal_captcha.png",
@@ -104,7 +112,7 @@ export const dataWorks: I_Article[] = [
         },
         date: "2014.1 ~ 2014.4",
         moreContentType: "modal",
-        moreContentModalComponent: WorksOzvisionHapitas,
+        moreContentModalComponent: WorksDanalCaptcha,
     },
     {
         imgUrl: "/img/works/danal_web.png",
@@ -121,7 +129,7 @@ export const dataWorks: I_Article[] = [
         },
         date: "2013. ~ 2015.",
         moreContentType: "modal",
-        moreContentModalComponent: WorksOzvisionHapitas,
+        moreContentModalComponent: WorksDanalWeb,
     },
     {
         imgUrl: "/img/works/netflow_1.jpeg",
@@ -138,7 +146,7 @@ export const dataWorks: I_Article[] = [
         },
         date: "2012.2",
         moreContentType: "modal",
-        moreContentModalComponent: WorksOzvisionHapitas,
+        moreContentModalComponent: WorksUnivNetflow,
     },
     {
         imgUrl: "/img/works/datalink.jpg",
@@ -155,7 +163,7 @@ export const dataWorks: I_Article[] = [
         },
         date: "2011.10",
         moreContentType: "modal",
-        moreContentModalComponent: WorksOzvisionHapitas,
+        moreContentModalComponent: WorksUnivThesis,
     },
     {
         imgUrl: "/img/works/internetwork.jpg",
@@ -172,6 +180,6 @@ export const dataWorks: I_Article[] = [
         },
         date: "2010.6",
         moreContentType: "modal",
-        moreContentModalComponent: WorksOzvisionHapitas,
+        moreContentModalComponent: WorksUnivNetwork,
     },
 ];
