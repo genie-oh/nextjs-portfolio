@@ -1,15 +1,20 @@
+import { FunctionComponent } from "react";
+
 import { CircularProgressbarWithChildren, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 import i18nData from "../../i18n/i18nData";
-import { dataEngineeringSkills } from "../../datas/dataEngineeringSkills";
+import { I_Skills } from "../../datas/types/I_Skills";
 
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { variantsRevealFromBotoom } from "../../motions/variantsRevealFromBottom";
 
-const AboutMeSkills = () => {
+const AboutMeSkills: FunctionComponent<{
+    label: string;
+    data: I_Skills[];
+}> = ({ label, data }) => {
     const controls = useAnimation();
     const [ref, inView] = useInView();
 
@@ -25,14 +30,14 @@ const AboutMeSkills = () => {
             variants={variantsRevealFromBotoom}
             initial="initial"
             animate={controls}
-            className="flex flex-col items-center justify-start m-5 lg:px-10 lg:m-10 lg:flex-1"
+            className="flex flex-col items-center justify-start my-5 lg:px-10 lg:my-10 lg:flex-1"
         >
             <div className="w-full p-5 mt-10 bg-white rounded-2xl">
-                <div className="px-5 py-2 mb-10 -mt-10 text-2xl font-bold text-center bg-yellow-300 rounded-full">
-                    Engineering Skills
+                <div className="px-5 py-2 mb-3 -mt-10 text-2xl font-bold text-center bg-yellow-300 rounded-full">
+                    {label}
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
-                    {dataEngineeringSkills.map((item, idx) => {
+                    {data.map((item, idx) => {
                         return (
                             <div key={idx} className="grid items-start grid-cols-3 my-6 md:grid-cols-5">
                                 <div className="w-20 h-20 mx-auto text-purple-600 lg:w-24 lg:h-24">
