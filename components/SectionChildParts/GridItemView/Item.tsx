@@ -1,21 +1,28 @@
+import React from "react";
 import { FunctionComponent, useState } from "react";
 import Modal from "react-modal";
 import { I_Article } from "../../../datas/types/I_Article";
 import i18nData from "../../../i18n/i18nData";
 
+import HomeContext from "../../Context/HomeContext";
 import ModalContent from "./ModalContent";
 
 const Item: FunctionComponent<{
     articleData: I_Article;
 }> = ({ articleData }) => {
+    const homeContext = React.useContext(HomeContext);
     const [modalIsOpen, setIsOpen] = useState(false);
 
     function openModal() {
         setIsOpen(true);
+        homeContext.HomeContextFunctions.toggleBlur(true);
+        homeContext.HomeContextFunctions.toggleOverFlowHiddenOrAutoOnBody(true);
     }
 
     function closeModal() {
         setIsOpen(false);
+        homeContext.HomeContextFunctions.toggleBlur(false);
+        homeContext.HomeContextFunctions.toggleOverFlowHiddenOrAutoOnBody(false);
     }
 
     return (
@@ -50,7 +57,7 @@ const Item: FunctionComponent<{
                 onRequestClose={closeModal}
                 contentLabel={i18nData(articleData.title_i18n)}
                 ariaHideApp={false}
-                className="w-full h-full bg-red-300 bg-opacity-80"
+                className="w-full h-full"
                 style={{
                     overlay: {
                         zIndex: 9999,
