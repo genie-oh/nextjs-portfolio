@@ -113,8 +113,8 @@ export const dataDevelopmentSkills: I_Skills[] = [
     {
         percent: 70,
         title_i18n: {
-            ja: "サービス要件定義",
-            ko: "일반적인 HTML, CSS, JQeury스킬",
+            ja: "traditional HTML, CSS, JQuery",
+            ko: "traditional HTML, CSS, JQuery",
             en: "traditional HTML, CSS, JQuery",
         },
         text_i18n: {
