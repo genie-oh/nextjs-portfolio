@@ -2,6 +2,7 @@ import AboutMeProfile from "../SectionChildParts/AboutMeProfile";
 import AboutMeStrength from "../SectionChildParts/AboutMeStrength";
 import AboutMeSkills from "../SectionChildParts/AboutMeSkills";
 import { dataEngineeringSkills } from "../../datas/dataEngineeringSkills";
+import { dataDevelopmentSkills } from "../../datas/dataDevelopmentSkills";
 
 const AboutMe = () => {
     return (
@@ -12,7 +13,7 @@ const AboutMe = () => {
             </div>
 
             <AboutMeSkills label="Engineering Skills" data={dataEngineeringSkills} />
-            <div className="m-5 bg-gray-100 h-96">development skills</div>
+            <AboutMeSkills label="Development Skills" data={dataDevelopmentSkills} />
         </div>
     );
 };
