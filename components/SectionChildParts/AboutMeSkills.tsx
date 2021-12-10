@@ -30,7 +30,7 @@ const AboutMeSkills: FunctionComponent<{
             variants={variantsRevealFromBotoom}
             initial="initial"
             animate={controls}
-            className="flex flex-col items-center justify-start my-5 lg:px-10 lg:my-10 lg:flex-1"
+            className="flex flex-col items-center justify-start mx-5 my-5 lg:mx-0 lg:px-10 lg:my-10 lg:flex-1"
         >
             <div className="w-full p-5 mt-10 bg-white rounded-2xl">
                 <div className="px-5 py-2 mb-3 -mt-10 text-2xl font-bold text-center bg-yellow-300 rounded-full">
