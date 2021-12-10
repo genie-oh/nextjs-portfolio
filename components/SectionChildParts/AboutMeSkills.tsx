@@ -1,7 +1,8 @@
 import { CircularProgressbarWithChildren, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-import { FcServices } from "react-icons/fc";
+import i18nData from "../../i18n/i18nData";
+import { dataEngineeringSkills } from "../../datas/dataEngineeringSkills";
 
 const AboutMeSkills = () => {
     return (
@@ -11,36 +12,31 @@ const AboutMeSkills = () => {
                     Engineering Skills
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
-                    {Array(9)
-                        .fill(0)
-                        .map((item, idx) => {
-                            return (
-                                <div className="grid items-start grid-cols-3 my-6 md:grid-cols-5">
-                                    <div className="w-20 h-20 mx-auto text-purple-600 lg:w-24 lg:h-24">
-                                        <CircularProgressbarWithChildren
-                                            value={80}
-                                            strokeWidth={10}
-                                            background
-                                            styles={buildStyles({
-                                                pathColor: "rgba(124, 58, 232, 1)",
-                                                backgroundColor: "rgba(255,255,255,1)",
-                                            })}
-                                        >
-                                            <FcServices className="mb-1 text-4xl text-purple-600" />
-                                            <span className="text-xs">
-                                                {80}
-                                                <span className="text-xs"></span>
-                                            </span>
-                                        </CircularProgressbarWithChildren>
-                                    </div>
-                                    <div className="col-span-2 pl-2 md:col-span-4 lg:px-8">
-                                        <p className="font-bold rounded-full">title</p>
-                                        <p className="mb-1 text-xs text-gray-500">interest score : 99</p>
-                                        <p className="text-sm whitespace-pre-wrap ">text</p>
-                                    </div>
+                    {dataEngineeringSkills.map((item, idx) => {
+                        return (
+                            <div key={idx} className="grid items-start grid-cols-3 my-6 md:grid-cols-5">
+                                <div className="w-20 h-20 mx-auto text-purple-600 lg:w-24 lg:h-24">
+                                    <CircularProgressbarWithChildren
+                                        value={item.percent}
+                                        strokeWidth={10}
+                                        background
+                                        styles={buildStyles({
+                                            pathColor: "rgba(124, 58, 232, 1)",
+                                            backgroundColor: "rgba(255,255,255,1)",
+                                        })}
+                                    >
+                                        <item.iconComponent className="mb-1 text-4xl text-purple-600" />
+                                        <span className="text-xs">{item.percent}</span>
+                                    </CircularProgressbarWithChildren>
                                 </div>
-                            );
-                        })}
+                                <div className="flex flex-col col-span-2 pl-2 md:col-span-4 lg:px-8">
+                                    <span className="mb-0.5 font-bold rounded-full">{i18nData(item.title_i18n)}</span>
+                                    <span className="mb-2 text-xs text-gray-500">interest score : {item.percent}</span>
+                                    <span className="text-sm whitespace-pre-wrap ">{i18nData(item.text_i18n)}</span>
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </div>
