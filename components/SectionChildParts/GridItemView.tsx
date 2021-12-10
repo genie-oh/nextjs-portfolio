@@ -1,5 +1,7 @@
 import { MdMoreHoriz } from "react-icons/md";
 
+import Item from "./GridItemView/Item";
+
 const GridItemView = () => {
     return (
         <div className="flex flex-col items-center justify-center m-5 md:m-10">
@@ -7,7 +9,7 @@ const GridItemView = () => {
                 {Array(9)
                     .fill(1)
                     .map((item, idx) => {
-                        return <div className="h-64 text-center bg-red-300">{idx}</div>;
+                        return <Item />;
                     })}
             </div>
 
