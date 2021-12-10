@@ -1,5 +1,6 @@
 import AboutMeProfile from "../SectionChildParts/AboutMeProfile";
 import AboutMeStrength from "../SectionChildParts/AboutMeStrength";
+import AboutMeSkills from "../SectionChildParts/AboutMeSkills";
 
 const AboutMe = () => {
     return (
@@ -9,7 +10,7 @@ const AboutMe = () => {
                 <AboutMeStrength />
             </div>
 
-            <div className="m-5 bg-gray-100 h-96">engineering skills</div>
+            <AboutMeSkills />
             <div className="m-5 bg-gray-100 h-96">development skills</div>
         </div>
     );
