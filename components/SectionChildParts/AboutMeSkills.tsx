@@ -4,9 +4,29 @@ import "react-circular-progressbar/dist/styles.css";
 import i18nData from "../../i18n/i18nData";
 import { dataEngineeringSkills } from "../../datas/dataEngineeringSkills";
 
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { variantsRevealFromBotoom } from "../../motions/variantsRevealFromBottom";
+
 const AboutMeSkills = () => {
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
+
+    useEffect(() => {
+        if (inView) {
+            controls.start("animate");
+        }
+    }, [controls, inView]);
+
     return (
-        <div className="flex flex-col items-center justify-start m-5 lg:px-10 lg:m-10 lg:flex-1">
+        <motion.div
+            ref={ref}
+            variants={variantsRevealFromBotoom}
+            initial="initial"
+            animate={controls}
+            className="flex flex-col items-center justify-start m-5 lg:px-10 lg:m-10 lg:flex-1"
+        >
             <div className="w-full p-5 mt-10 bg-white rounded-2xl">
                 <div className="px-5 py-2 mb-10 -mt-10 text-2xl font-bold text-center bg-yellow-300 rounded-full">
                     Engineering Skills
@@ -39,7 +59,7 @@ const AboutMeSkills = () => {
                     })}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
