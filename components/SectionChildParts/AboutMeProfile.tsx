@@ -64,7 +64,7 @@ const AboutMeProfile = () => {
                     </p>
                     <p className="mb-2">
                         {i18nData({
-                            ja: "ウェブサービスのアーキテクトとしてより高みへと成長するため、さまざまなサービスのアーキテクチャー設計と開発の機械と出会うことを楽しみにしております。",
+                            ja: "ウェブサービスのアーキテクトとしてより高みへと成長するため、さまざまなサービスのアーキテクチャー設計と開発の機会と出会うことを楽しみにしております。",
                             ko: "웹서비스 아키텍트로 성장하기 위해 다양한 서비스의 아키텍처 설계와 개발 경험을 얻을 수 있는 기회와 만나는 것을 기대하고 있습니다.",
                             en: "I hope to meet more chances to design servcie architecture and develop software to grow up to web service architect.",
                         })}
