@@ -29,7 +29,7 @@ interface I_struct {
 export const dataCarrers: I_struct[] = [
     {
         iconComponent: HiTrendingUp,
-        imgUrl: "/img/onfuture.jpg",
+        imgUrl: "/img/careers/onfuture.jpg",
         imgTitle: "Architect",
         imgText_i18n: {
             ja: "サービスとソフトウェアのアーキテクチャーを先頭からリード",
