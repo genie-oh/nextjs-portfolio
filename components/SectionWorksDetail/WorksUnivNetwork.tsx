@@ -95,9 +95,8 @@ const WorksUnivNetwork = () => {
 
             <div>
                 <iframe
+                    className="w-full h-64 md:h-72 lg:h-96"
                     src="https://www.youtube.com/embed/iKJb2bD5fQg?rel=0&autoplay=0&mute=1"
-                    width="560"
-                    height="315"
                 ></iframe>
             </div>
 

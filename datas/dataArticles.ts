@@ -17,6 +17,7 @@ export const dataArticles: I_Article[] = [
         date: "2020.12",
         moreContentType: "url",
         moreContentUrl: "https://qiita.com/genie-oh/items/b2c8e3cf5f4f1ef34a1f",
+        onlySupportLanguages: ["ja"],
     },
     {
         imgUrl: "/img/articles/he.png",
@@ -34,6 +35,7 @@ export const dataArticles: I_Article[] = [
         date: "2021.10",
         moreContentType: "url",
         moreContentUrl: "https://qiita.com/genie-oh/items/18fb7bc977002d35b66f",
+        onlySupportLanguages: ["ja"],
     },
     {
         imgUrl: "/img/articles/gc.png",
@@ -51,6 +53,7 @@ export const dataArticles: I_Article[] = [
         date: "2020.8 ~ 2020.11",
         moreContentType: "url",
         moreContentUrl: "https://qiita.com/genie-oh/items/e6dfc49fb9899f931271",
+        onlySupportLanguages: ["ja"],
     },
     {
         imgUrl: "/img/articles/agile.png",
@@ -68,6 +71,7 @@ export const dataArticles: I_Article[] = [
         date: "2020.3",
         moreContentType: "url",
         moreContentUrl: "https://qiita.com/genie-oh/items/48862c24455134bea114",
+        onlySupportLanguages: ["ja"],
     },
     {
         imgUrl: "/img/articles/nice.png",
@@ -85,5 +89,6 @@ export const dataArticles: I_Article[] = [
         date: "2020.3",
         moreContentType: "url",
         moreContentUrl: "https://qiita.com/genie-oh/items/27f7a12c5d1f60be6a76",
+        onlySupportLanguages: ["ja"],
     },
 ];

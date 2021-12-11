@@ -10,6 +10,7 @@ import ModalContent from "./ModalContent";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import { variantsRevealFromBotoom } from "../../../motions/variantsRevealFromBottom";
+import LanguageSupport from "./LanguageSupport";
 
 const Item: FunctionComponent<{
     articleData: I_Article;
@@ -73,7 +74,8 @@ const Item: FunctionComponent<{
                         })}
                     </p>
                 </div>
-                <div className="px-5 py-1 mt-3 mb-10">
+                {articleData.onlySupportLanguages && <LanguageSupport languages={articleData.onlySupportLanguages} />}
+                <div className="px-5 py-1 mb-10">
                     <p className="mb-2 text-lg font-bold">{i18nData(articleData.title_i18n)}</p>
                     <p className="pb-5 mb-3 text-sm text-gray-500">{i18nData(articleData.text_i18n)}</p>
                 </div>

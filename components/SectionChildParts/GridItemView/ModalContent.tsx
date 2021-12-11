@@ -22,7 +22,7 @@ const ModalContent: FunctionComponent<{
                     e.stopPropagation();
                 }}
             >
-                <div className="sticky flex items-center justify-end w-full top-5">
+                <div className="sticky z-50 flex items-center justify-end w-full top-5">
                     <button
                         className="p-1 text-white bg-gray-500 rounded-full hover:bg-red-700"
                         onClick={handlerCloseModal}
