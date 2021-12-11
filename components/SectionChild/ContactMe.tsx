@@ -1,7 +1,18 @@
+import { useState } from "react";
+
 import i18nData from "../../i18n/i18nData";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const ContactMe = () => {
+    const [formSubmitted, setFormSubmitted] = useState(false);
+
+    const handleSubmit = (ev) => {
+        ev.preventDefault();
+
+        //@todo form submit logic
+        setFormSubmitted(true);
+    };
+
     return (
         <div className="flex flex-wrap items-center justify-center">
             <div className="flex flex-wrap items-center justify-center w-full h-auto px-10 py-5 lg:w-1/2">
@@ -23,9 +34,7 @@ const ContactMe = () => {
                                 <div className="divide-y divide-gray-200">
                                     <form
                                         className="pt-8 -mb-8 space-y-4 text-base leading-6 text-gray-700 sm:text-lg sm:leading-7"
-                                        onSubmit={() => {
-                                            alert(1);
-                                        }}
+                                        onSubmit={handleSubmit}
                                     >
                                         <label
                                             className="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase"
@@ -40,7 +49,7 @@ const ContactMe = () => {
                                             id="grid-first-name"
                                             type="text"
                                             placeholder="Name"
-                                            disabled={false}
+                                            disabled={formSubmitted}
                                         />
 
                                         <label
@@ -56,7 +65,7 @@ const ContactMe = () => {
                                             id="grid-first-name"
                                             type="email"
                                             placeholder="Email"
-                                            disabled={false}
+                                            disabled={formSubmitted}
                                         />
 
                                         <label
@@ -70,17 +79,25 @@ const ContactMe = () => {
                                             name="message"
                                             className="w-full px-4 py-3 bg-gray-200 border rounded-md resize-y focus:outline-none"
                                             placeholder="Your message..."
-                                            disabled={false}
+                                            disabled={formSubmitted}
                                         ></textarea>
 
                                         <div className="flex items-end justify-end">
-                                            <button
-                                                type="submit"
-                                                className="px-4 py-2 font-semibold text-white bg-blue-500 rounded hover:bg-green-500"
-                                                disabled={false}
-                                            >
-                                                Send
-                                            </button>
+                                            {!formSubmitted ? (
+                                                <button
+                                                    type="submit"
+                                                    className="px-4 py-2 font-semibold text-white bg-blue-500 rounded hover:bg-green-500"
+                                                    disabled={formSubmitted}
+                                                >
+                                                    Send
+                                                </button>
+                                            ) : (
+                                                <p className="block w-full p-2 text-sm text-center text-white bg-blue-700 rounded-xl">
+                                                    Thanks! your message is accepted.
+                                                    <br />
+                                                    Please wait for my replying.
+                                                </p>
+                                            )}
                                         </div>
                                     </form>
                                 </div>
