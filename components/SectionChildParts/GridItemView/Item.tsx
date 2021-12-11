@@ -40,6 +40,17 @@ const Item: FunctionComponent<{
         homeContext.HomeContextFunctions.toggleOverFlowHiddenOrAutoOnBody(false);
     }
 
+    function openUrl() {
+        window.open(articleData.moreContentUrl, "_blank");
+    }
+
+    let handlerOnClick = null;
+    if (articleData.moreContentType === "modal") {
+        handlerOnClick = openModal;
+    } else if (articleData.moreContentType === "url") {
+        handlerOnClick = openUrl;
+    }
+
     return (
         <motion.div
             ref={ref}
@@ -49,7 +60,7 @@ const Item: FunctionComponent<{
             whileHover={{ scale: 1.05 }}
             className="relative bg-white shadow-lg cursor-pointer rounded-2xl"
         >
-            <div className="w-full h-full" onClick={openModal}>
+            <div className="w-full h-full" onClick={handlerOnClick}>
                 <div className="relative w-full h-64 overflow-hidden bg-gray-300 rounded-t-2xl">
                     <img src={articleData.imgUrl} className="object-cover w-full h-full" />
                     <p className="absolute bottom-0.5 flex flex-wrap p-1 text-xs text-white max-w-max">
@@ -69,26 +80,31 @@ const Item: FunctionComponent<{
                 <div className="absolute bottom-0 w-full px-5">
                     <div className="flex items-center justify-between py-3 border-t-2">
                         <p className="text-xs">{articleData.date}</p>
-                        <button className="px-5 py-1 text-white bg-blue-500 rounded-full">read more</button>
+                        <button className="px-5 py-1 text-white bg-blue-500 rounded-full">
+                            {articleData.moreContentType === "modal" && "read more"}
+                            {articleData.moreContentType === "url" && "open url"}
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <Modal
-                isOpen={modalIsOpen}
-                onRequestClose={closeModal}
-                contentLabel={i18nData(articleData.title_i18n)}
-                ariaHideApp={false}
-                className="w-full h-full"
-                style={{
-                    overlay: {
-                        zIndex: 9999,
-                        backgroundColor: "transparent",
-                    },
-                }}
-            >
-                <ModalContent handlerCloseModal={closeModal} articleData={articleData} />
-            </Modal>
+            {articleData.moreContentType === "modal" && (
+                <Modal
+                    isOpen={modalIsOpen}
+                    onRequestClose={closeModal}
+                    contentLabel={i18nData(articleData.title_i18n)}
+                    ariaHideApp={false}
+                    className="w-full h-full"
+                    style={{
+                        overlay: {
+                            zIndex: 9999,
+                            backgroundColor: "transparent",
+                        },
+                    }}
+                >
+                    <ModalContent handlerCloseModal={closeModal} articleData={articleData} />
+                </Modal>
+            )}
         </motion.div>
     );
 };
