@@ -5,6 +5,7 @@ import { GlobalMenu } from "../components/GlobalMenu";
 import Section from "../components/Section";
 import AboutMe from "../components/SectionChild/AboutMe";
 import Articles from "../components/SectionChild/Articles";
+import Careers from "../components/SectionChild/Careers";
 import SalesPoint from "../components/SectionChild/SalesPoint";
 import Top from "../components/SectionChild/Top";
 import Works from "../components/SectionChild/Works";
@@ -66,7 +67,7 @@ export default function Home() {
                         </Section>
                         <Section id="SEC-CAREERS" title="Careers" style={styleSectionB}>
                             <WaveDividerTop />
-                            <div className="h-96">Careers</div>
+                            <Careers />
                             <WaveDividerBottom />
                         </Section>
                         <Section id="SEC-ARTICLES" title="Articles" style={styleSectionA}>
