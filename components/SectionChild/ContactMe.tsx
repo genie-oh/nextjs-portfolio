@@ -6,8 +6,7 @@ import { variantsRevealFromBotoom } from "../../motions/variantsRevealFromBottom
 import i18nData from "../../i18n/i18nData";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
-import dateFormat from "dateformat";
-import { GoogleSpreadsheet } from "google-spreadsheet";
+import axios from "axios";
 
 const ContactMe = () => {
     //-- for motion
@@ -20,47 +19,23 @@ const ContactMe = () => {
         }
     }, [controls, inView]);
 
-    //-- send message to google sheet
-    const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID;
-    const SHEET_ID = process.env.REACT_APP_SHEET_ID;
-    const CLIENT_EMAIL = process.env.REACT_APP_GOOGLE_CLIENT_EMAIL;
-    const PRIVATE_KEY = process.env.REACT_APP_GOOGLE_SERVICE_PRIVATE_KEY;
-
-    const googleSheetService = new GoogleSpreadsheet(SPREADSHEET_ID);
-
-    const sendToGoogleSheetAsAppendRow = async (rowData) => {
-        try {
-            await googleSheetService.useServiceAccountAuth({
-                client_email: CLIENT_EMAIL,
-                private_key: PRIVATE_KEY,
-            });
-            await googleSheetService.loadInfo();
-
-            const sheet = googleSheetService.sheetsById[SHEET_ID];
-            await sheet.addRow(rowData);
-        } catch (e) {
-            alert("sorry: message sending error occured");
-        }
-    };
-
     //-- submit Event Handle
     const [formSubmitted, setFormSubmitted] = useState(false);
 
     const handleSubmit = (ev) => {
         ev.preventDefault();
-
-        const rowData = {
-            NAME: ev.target.elements.name.value,
-            EMAIL: ev.target.elements.email.value,
-            MESSAGE: ev.target.elements.message.value,
-            DATE: dateFormat(new Date(), "yyyy-mm-dd hh:mm:ss"),
-        };
-
-        //throwable
-        sendToGoogleSheetAsAppendRow(rowData);
-
-        //if success
         setFormSubmitted(true);
+
+        axios
+            .post("/api/message", {
+                NAME: ev.target.elements.name.value,
+                EMAIL: ev.target.elements.email.value,
+                MESSAGE: ev.target.elements.message.value,
+            })
+            .catch(function (error) {
+                alert("Sorry. Sending your message is failed. please wait a moment and try again.");
+                setFormSubmitted(false);
+            });
     };
 
     return (
