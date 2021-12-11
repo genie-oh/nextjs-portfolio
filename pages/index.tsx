@@ -6,6 +6,7 @@ import Section from "../components/Section";
 import AboutMe from "../components/SectionChild/AboutMe";
 import Articles from "../components/SectionChild/Articles";
 import Careers from "../components/SectionChild/Careers";
+import ContactMe from "../components/SectionChild/ContactMe";
 import SalesPoint from "../components/SectionChild/SalesPoint";
 import Top from "../components/SectionChild/Top";
 import Works from "../components/SectionChild/Works";
@@ -75,7 +76,7 @@ export default function Home() {
                         </Section>
                         <Section id="SEC-CONTACTME" title="Contact Me" style={styleSectionB}>
                             <WaveDividerTop />
-                            <div className="h-96">Contact Me</div>
+                            <ContactMe />
                         </Section>
 
                         <SectionFooter />
