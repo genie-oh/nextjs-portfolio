@@ -12,7 +12,7 @@ const Top = () => {
                 {languageList.map((item, idx) => {
                     return (
                         <Link key={idx} href="./" locale={item.locale}>
-                            <span className="mx-5 text-base text-white transform cursor-pointer lg:mx-12 lg:text-xl hover:text-black hover:scale-125">
+                            <span className="mx-5 text-base text-white transform cursor-pointer lg:mx-12 lg:text-xl hover:text-black hover:scale-110">
                                 {item.title}
                             </span>
                         </Link>
