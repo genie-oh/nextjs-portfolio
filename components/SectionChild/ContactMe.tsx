@@ -1,4 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
+import { variantsRevealFromBotoom } from "../../motions/variantsRevealFromBottom";
 
 import i18nData from "../../i18n/i18nData";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
@@ -7,6 +10,16 @@ import dateFormat from "dateformat";
 import { GoogleSpreadsheet } from "google-spreadsheet";
 
 const ContactMe = () => {
+    //-- for motion
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
+
+    useEffect(() => {
+        if (inView) {
+            controls.start("animate");
+        }
+    }, [controls, inView]);
+
     //-- send message to google sheet
     const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID;
     const SHEET_ID = process.env.REACT_APP_SHEET_ID;
@@ -51,9 +64,15 @@ const ContactMe = () => {
     };
 
     return (
-        <div className="flex flex-wrap items-center justify-center">
+        <motion.div
+            ref={ref}
+            variants={variantsRevealFromBotoom}
+            initial="initial"
+            animate={controls}
+            className="flex flex-wrap items-center justify-center"
+        >
             <div className="flex flex-wrap items-center justify-center w-full h-auto px-10 py-5 lg:w-1/2">
-                <div className="flex flex-col justify-center pb-20">
+                <div className="flex flex-col justify-center pb-20 lg:pb-0">
                     <div className="relative sm:max-w-xl sm:mx-auto">
                         <div className="absolute inset-0 transform -skew-y-6 bg-blue-400 shadow-lg md:skew-y-0 md:-rotate-6 md:rounded-3xl"></div>
                         <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
@@ -168,7 +187,7 @@ const ContactMe = () => {
                     </ul>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
