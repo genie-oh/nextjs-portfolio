@@ -3,7 +3,7 @@ import { I_Article } from "./types/I_Article";
 export const dataArticles: I_Article[] = [
     {
         imgUrl: "/img/articles/exception.png",
-        categories: ["tag1"],
+        categories: ["php", "error handling", "exception", "oop", "software architecture"],
         title_i18n: {
             ja: "[PHP] Exceptionエラー設計原則とアプリケーションへの導入",
             ko: "[PHP] Exception 에러 핸들링 설계 원칙과 어플리케이션 도입",
@@ -20,7 +20,7 @@ export const dataArticles: I_Article[] = [
     },
     {
         imgUrl: "/img/articles/he.png",
-        categories: ["tag1"],
+        categories: ["homomorphic", "encryption", "security"],
         title_i18n: {
             ja: "[Crypto] E(1) + E(2) = E(3)？同型暗号化。暗号化されたまま演算を行う技術",
             ko: "[Crypto] E(1) + E(2) = E(3)？동형암호화。암호화데이터를 유지하며 연산을 수행하는 기술",
@@ -37,7 +37,7 @@ export const dataArticles: I_Article[] = [
     },
     {
         imgUrl: "/img/articles/gc.png",
-        categories: ["tag1"],
+        categories: ["php", "garbage collection", "memory management", "variable control mechanism"],
         title_i18n: {
             ja: "[PHP] なぜGarbageCollection? メモリとGCを意識する (全8記事)",
             ko: "[PHP] 왜 GarbageCollection인가? 메모리와 GC를 의식하자 (총8개의 글)",
@@ -54,7 +54,7 @@ export const dataArticles: I_Article[] = [
     },
     {
         imgUrl: "/img/articles/agile.png",
-        categories: ["tag1"],
+        categories: ["agile", "project", "business"],
         title_i18n: {
             ja: "[Project] Agileで落ちやすい罠",
             ko: "[Project] 애자일 개발에서 빠지기 쉬운 함정",
@@ -71,7 +71,7 @@ export const dataArticles: I_Article[] = [
     },
     {
         imgUrl: "/img/articles/nice.png",
-        categories: ["tag1"],
+        categories: ["linux", "os", "process", "priority", "nice"],
         title_i18n: {
             ja: "[Linux] niceコマンドで知るプロセスと優先順位",
             ko: "[Linux] nice커맨드로 알아보는 프로세스 우선순위",
