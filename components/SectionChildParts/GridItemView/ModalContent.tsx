@@ -39,7 +39,7 @@ const ModalContent: FunctionComponent<{
                             backgroundSize: "cover",
                         }}
                     >
-                        <p className="w-full p-1 text-lg text-center text-white bg-black lg:p-5 lg:px-10 lg:text-4xl bg-opacity-80">
+                        <p className="w-full p-1 m-0 text-lg text-center text-white bg-black lg:p-5 lg:px-10 lg:text-4xl bg-opacity-80">
                             {i18nData(articleData.title_i18n)}
                         </p>
                     </div>

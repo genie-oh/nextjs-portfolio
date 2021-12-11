@@ -24,4 +24,6 @@ npm i react-burger-menu
 npm i react-country-flag
 npm i google-spreadsheet
 npm i dateformat
+
+npm i axios
 ```

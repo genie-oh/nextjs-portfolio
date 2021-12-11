@@ -12,7 +12,7 @@ const Top = () => {
                 {languageList.map((item, idx) => {
                     return (
                         <Link key={idx} href="./" locale={item.locale}>
-                            <span className="mx-5 text-base text-white transform cursor-pointer lg:mx-12 lg:text-xl hover:text-black hover:scale-125">
+                            <span className="mx-5 text-base text-white transform cursor-pointer lg:mx-12 lg:text-xl hover:text-black hover:scale-110">
                                 {item.title}
                             </span>
                         </Link>
@@ -42,7 +42,7 @@ const Top = () => {
                     <img className="xl:my-32 h-1/2 xl:h-4/6" src="/img/common/top.svg" />
                 </div>
 
-                <div className="absolute right-0 z-50 w-16 p-2 text-center bg-white bottom-1 xl:relative xl:mt-20 rounded-l-2xl xl:bg-opacity-100 xl:w-72 xl:rounded-2xl">
+                <div className="absolute right-0 z-50 w-16 p-2 text-center bg-white bottom-5 xl:relative xl:mt-20 rounded-l-2xl xl:bg-opacity-100 xl:w-72 xl:rounded-2xl">
                     <div className="flex flex-col items-center justify-center mx-auto mb-2 xl:flex-row">
                         <img className="w-8 m-2 xl:w-12" src="/img/common/logo_ts.svg" />
                         <img className="w-8 m-2 xl:w-12" src="/img/common/logo_react.svg" />
