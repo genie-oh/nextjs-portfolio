@@ -12,4 +12,10 @@ module.exports = {
     if (!isServer) config.resolve.fallback.tls = false;
     return config;
   },
+  env: {
+    REACT_APP_SPREADSHEET_ID : process.env.REACT_APP_SPREADSHEET_ID,
+    REACT_APP_SHEET_ID: process.env.REACT_APP_SHEET_ID,
+    REACT_APP_GOOGLE_CLIENT_EMAIL: process.env.REACT_APP_GOOGLE_CLIENT_EMAIL,
+    REACT_APP_GOOGLE_SERVICE_PRIVATE_KEY: process.env.REACT_APP_GOOGLE_SERVICE_PRIVATE_KEY,
+  },
 }
