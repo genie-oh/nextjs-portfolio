@@ -28,7 +28,7 @@ const AboutMeProfile = () => {
         >
             <div className="-mt-24 md:-mt-32 ">
                 <div className="flex items-center justify-center mx-auto overflow-hidden bg-white border-4 border-gray-200 h-36 w-52 md:w-64 md:h-48 md:border-8 rounded-2xl">
-                    <Image src="/img/about_me/mypic.jpg" width={250} height={250} layout="fixed" />
+                    <img src="/img/about_me/mypic.jpg" />
                 </div>
             </div>
 
