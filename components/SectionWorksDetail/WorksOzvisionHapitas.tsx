@@ -23,7 +23,7 @@ const WorksOzvisionHapitas = () => {
             children: i18nData({
                 ja: (
                     <LeftBorderList
-                        title="T-POINTサービスをハピタスのポイント交換システムへの統合案件とともに、既存交換システムのリニュアルプロジェクトを遂行"
+                        title="T-POINTサービスを、ハピタスポイント交換システムへ統合"
                         titleBorder={true}
                         list={[
                             "プロジェクトリーダーとしてプロジェクトを主導。プロジェクト計画作成やマイルストーン設定を主導し遂行",
@@ -38,7 +38,7 @@ const WorksOzvisionHapitas = () => {
                 ),
                 ko: (
                     <LeftBorderList
-                        title="T-POINT맴버쉽포인트서비스를 해피타스 포인트 교환 시스템으로 통합 안건과 함께, 기존 교환시스템의 고도화 리뉴얼 프로젝트를 수행"
+                        title="T-POINT맴버쉽포인트서비스를 해피타스 포인트 교환 시스템으로 통합"
                         titleBorder={true}
                         list={[
                             "프로젝트 리더로써 프로젝트를 주도. 프로젝트 계획 작성 및 마일스톤 설정을 주도하여 수행",
@@ -53,7 +53,7 @@ const WorksOzvisionHapitas = () => {
                 ),
                 en: (
                     <LeftBorderList
-                        title="renewal point exchange system from legacy to advanced with integrating T-POINT membership point service to hapitas point exchange system"
+                        title="integrating T-POINT membership point service to hapitas point exchange system"
                         titleBorder={true}
                         list={[
                             "lead project as project leader. carry out make project plan. set project milestone.",
