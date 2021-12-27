@@ -79,7 +79,7 @@ const AboutMeProfile = () => {
                                 <>
                                     <li>
                                         <span className="font-bold">日本語</span>は、
-                                        中・上級ビジネスレベルとして駆使できます。
+                                        上級ビジネスレベルとして駆使できます。
                                     </li>
                                     <li>
                                         <span className="font-bold">英語</span>は、書き読みをある程度,
@@ -93,7 +93,7 @@ const AboutMeProfile = () => {
                             ko: (
                                 <>
                                     <li>
-                                        <span className="font-bold">일본어</span>는 중상급 비지니스 수준입니다.
+                                        <span className="font-bold">일본어</span>는 상급 비지니스 수준입니다.
                                     </li>
                                     <li>
                                         <span className="font-bold">영어</span>는 읽고 쓰기를 어느 정도. 말하기 듣기는
