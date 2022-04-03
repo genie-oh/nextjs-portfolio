@@ -17,9 +17,9 @@ export const dataArticles: I_Article[] = [
         date: "2022.04",
         moreContentType: "url",
         moreContentUrl_i18n: {
-            ja: "https://qiita.com/genie-oh/items/b2c8e3cf5f4f1ef34a1f",
-            ko: "https://dev.to/genie_oh/try-to-component-oriented-software-architecture-with-middleware-pattern-25dc-temp-slug-6096689",
-            en: "https://dev.to/genie_oh/try-to-component-oriented-software-architecture-with-middleware-pattern-25dc-temp-slug-6096689",
+            ja: "https://qiita.com/genie-oh/items/e48a79600f0c1fa60f5b",
+            ko: "https://dev.to/genie_oh/thinking-about-making-external-api-to-mock-api-server-with-mockoon-3p4",
+            en: "https://dev.to/genie_oh/thinking-about-making-external-api-to-mock-api-server-with-mockoon-3p4",
         },
         onlySupportLanguages: ["ja", "en"],
     },
