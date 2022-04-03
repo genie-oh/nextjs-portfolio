@@ -9,7 +9,7 @@ export interface I_Article {
     text_i18n: I_i18n<string>;
     date: string;
     moreContentType: "modal" | "url";
-    moreContentUrl?: string;
+    moreContentUrl_i18n?: I_i18n<string>;
     moreContentModalComponent?: FunctionComponent;
     onlySupportLanguages?: Type_languages[];
 }
