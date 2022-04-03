@@ -2,6 +2,28 @@ import { I_Article } from "./types/I_Article";
 
 export const dataArticles: I_Article[] = [
     {
+        imgUrl: "/img/articles/mockoon2.png",
+        categories: ["php", "error handling", "exception", "oop", "software architecture"],
+        title_i18n: {
+            ja: "[Backend] 外部連携APIのMock API Server化を検討する (Mockoon)",
+            ko: "[Backend] 외부연계API의Mock API Server화 검토 (Mockoon)",
+            en: "[Backend] Thinking about making external API to Mock API Server with Mockoon",
+        },
+        text_i18n: {
+            ja: "「どうやって外部連携APIをMock化し、ローカルでのテストと維持補修をしやすくするか？」を考えます",
+            ko: '"어떻게 외부연계API를 Mock으로 만들어 로컬환경 테스트와 유지보수를 보다 쉽게 할 것인가?"에 대해 생각해봅니다',
+            en: 'In this article, consider "How to make an external API to MockAPI to make software to more easier on testing, operating and maintain?"',
+        },
+        date: "2022.04",
+        moreContentType: "url",
+        moreContentUrl_i18n: {
+            ja: "https://qiita.com/genie-oh/items/e48a79600f0c1fa60f5b",
+            ko: "https://dev.to/genie_oh/thinking-about-making-external-api-to-mock-api-server-with-mockoon-3p4",
+            en: "https://dev.to/genie_oh/thinking-about-making-external-api-to-mock-api-server-with-mockoon-3p4",
+        },
+        onlySupportLanguages: ["ja", "en"],
+    },
+    {
         imgUrl: "/img/articles/exception.png",
         categories: ["php", "error handling", "exception", "oop", "software architecture"],
         title_i18n: {
@@ -16,7 +38,11 @@ export const dataArticles: I_Article[] = [
         },
         date: "2020.12",
         moreContentType: "url",
-        moreContentUrl: "https://qiita.com/genie-oh/items/b2c8e3cf5f4f1ef34a1f",
+        moreContentUrl_i18n: {
+            ja: "https://qiita.com/genie-oh/items/b2c8e3cf5f4f1ef34a1f",
+            ko: "https://qiita.com/genie-oh/items/b2c8e3cf5f4f1ef34a1f",
+            en: "https://qiita.com/genie-oh/items/b2c8e3cf5f4f1ef34a1f",
+        },
         onlySupportLanguages: ["ja"],
     },
     {
@@ -34,7 +60,11 @@ export const dataArticles: I_Article[] = [
         },
         date: "2021.10",
         moreContentType: "url",
-        moreContentUrl: "https://qiita.com/genie-oh/items/18fb7bc977002d35b66f",
+        moreContentUrl_i18n: {
+            ja: "https://qiita.com/genie-oh/items/18fb7bc977002d35b66f",
+            ko: "https://qiita.com/genie-oh/items/18fb7bc977002d35b66f",
+            en: "https://qiita.com/genie-oh/items/18fb7bc977002d35b66f",
+        },
         onlySupportLanguages: ["ja"],
     },
     {
@@ -52,7 +82,11 @@ export const dataArticles: I_Article[] = [
         },
         date: "2020.8 ~ 2020.11",
         moreContentType: "url",
-        moreContentUrl: "https://qiita.com/genie-oh/items/e6dfc49fb9899f931271",
+        moreContentUrl_i18n: {
+            ja: "https://qiita.com/genie-oh/items/e6dfc49fb9899f931271",
+            ko: "https://qiita.com/genie-oh/items/e6dfc49fb9899f931271",
+            en: "https://qiita.com/genie-oh/items/e6dfc49fb9899f931271",
+        },
         onlySupportLanguages: ["ja"],
     },
     {
@@ -70,7 +104,11 @@ export const dataArticles: I_Article[] = [
         },
         date: "2020.3",
         moreContentType: "url",
-        moreContentUrl: "https://qiita.com/genie-oh/items/48862c24455134bea114",
+        moreContentUrl_i18n: {
+            ja: "https://qiita.com/genie-oh/items/48862c24455134bea114",
+            ko: "https://qiita.com/genie-oh/items/48862c24455134bea114",
+            en: "https://qiita.com/genie-oh/items/48862c24455134bea114",
+        },
         onlySupportLanguages: ["ja"],
     },
     {
@@ -88,7 +126,11 @@ export const dataArticles: I_Article[] = [
         },
         date: "2020.3",
         moreContentType: "url",
-        moreContentUrl: "https://qiita.com/genie-oh/items/27f7a12c5d1f60be6a76",
+        moreContentUrl_i18n: {
+            ja: "https://qiita.com/genie-oh/items/27f7a12c5d1f60be6a76",
+            ko: "https://qiita.com/genie-oh/items/27f7a12c5d1f60be6a76",
+            en: "https://qiita.com/genie-oh/items/27f7a12c5d1f60be6a76",
+        },
         onlySupportLanguages: ["ja"],
     },
 ];

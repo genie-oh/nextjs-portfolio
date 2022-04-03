@@ -41,8 +41,9 @@ const Item: FunctionComponent<{
         homeContext.HomeContextFunctions.toggleOverFlowHiddenOrAutoOnBody(false);
     }
 
+    const articleUrl = articleData.moreContentUrl_i18n && i18nData(articleData.moreContentUrl_i18n);
     function openUrl() {
-        window.open(articleData.moreContentUrl, "_blank");
+        window.open(articleUrl, "_blank");
     }
 
     let handlerOnClick = null;
