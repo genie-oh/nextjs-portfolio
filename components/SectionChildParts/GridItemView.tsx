@@ -6,8 +6,9 @@ import Item from "./GridItemView/Item";
 
 const GridItemView: FunctionComponent<{
     articleDatas: I_Article[];
-}> = ({ articleDatas }) => {
-    const [loadedData, setLoadedData] = useState(articleDatas.slice(0, 3));
+    firstLoadedTimes?: number;
+}> = ({ articleDatas, firstLoadedTimes=1 }) => {
+    const [loadedData, setLoadedData] = useState(articleDatas.slice(0, 3 * firstLoadedTimes));
     const [showMore, setShowMore] = useState(true);
 
     const loadNextData = () => {

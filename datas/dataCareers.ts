@@ -72,6 +72,46 @@ export const dataCarrers: I_struct[] = [
     },
     {
         iconComponent: MdWork,
+        imgUrl: "/img/careers/ise2.png",
+        imgTitle: "Software and Service for Digital Trasformation, Advanced Technology",
+        imgText_i18n: {
+            ja: "Next Innovation with Our Technical Vitality",
+            ko: "Next Innovation with Our Technical Vitality",
+            en: "Next Innovation with Our Technical Vitality",
+        },
+        period: "2022.8 - present",
+        title: "Advisory IT Specialist / Web Engineer",
+        categories: [
+            "Full-stack Web Developer",
+            "Project Leader",
+            "System(Requirement) Engineer/Advisor",
+            "Tech Advisor/Trainer",
+            "Back-end",
+            "Front-end",
+        ],
+        where: "IBM Japan Systems Engineering Co., Ltd.",
+        whereUrl: "https://www.ibm.com/jp-ja/about/subsidiaries/ise",
+        country: "japan",
+        textlist_i18n: [
+            {
+                ja: "企業の業務DX化検討におけるPoC版ウェブサービスにおいて、データ領域の要件定義・設計・コンサルティング、バックエンドサービスの設計・開発をリード",
+                ko: "기업의업무DX화검토에 대한 PoC판 웹서비스의 데이터 영역의 요건정의/설계/컨설팅 및 백엔드서비스의 설계/개발을 리드 ",
+                en: "laed data design and back-end service with defining requirement/consulting in PoC web service project about digital transformation of company.",
+            },
+            {
+                ja: "Technical Vitality活動におけるコミッター、アドバイザー、リーダーを遂行 (新人 Hackason 研修、TDDをテーマとしたScrum Developerセミナー企画)",
+                ko: "Technical Vitality활동에 대한 커밋터, 어드바이저, 리더를 수행 (신인 Hackason 연수, TDD를 테마로 한 Scrum Developer 세미나 기획)",
+                en: "act as committer, advisor, leader about activity of Technical Vitality (Hackason Training for Newcomer, seminar plainning about TDD for scrum developers).",
+            },
+        ],
+        styleSet: {
+            contentStyle: null,
+            contentArrowStyle: null,
+            iconStyle: { background: "rgba(5, 150, 105, 1)", color: "#fff" },
+        },
+    },
+    {
+        iconComponent: MdWork,
         imgUrl: "/img/careers/hapitas1.jpeg",
         imgTitle: "Hapitas",
         imgText_i18n: {
@@ -79,7 +119,7 @@ export const dataCarrers: I_struct[] = [
             ko: "300만 이상의 유저를 보유한 어필리에이트 포인트 서비스",
             en: "Point Income/Affiliate Service having over 3 milion users",
         },
-        period: "2020.1 - present",
+        period: "2020.1 - 2022.7",
         title: "Full-Range Role Engineer",
         categories: [
             "Team SubLeader",
@@ -126,7 +166,7 @@ export const dataCarrers: I_struct[] = [
         imgTitle: "Hapitas Comic",
         imgText_i18n: {
             ja: "CtoCウェブ漫画販売サービス（スタートアップ、サービス終了）",
-            ko: "CtoC 웹 만화 판매 서비스(스타트업, 서비스 종료)",
+            ko: "CtoC 웹 만화 판매 서비스(스타트업, 서비스 종료)",
             en: "CtoC Web Comics Market Service (Startup. service closed)",
         },
         period: "2018.6 - 2019.12",
