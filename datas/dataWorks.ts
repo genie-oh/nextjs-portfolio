@@ -59,6 +59,7 @@ export const dataWorks: I_Article[] = [
         },
         date: "2018.1 ~ 2022.7",
         moreContentType: "modal",
+        moreContentModalComponent: WorksOzvisionHapitas,
     },
     {
         imgUrl: "/img/works/hapitascomic.jpeg",
