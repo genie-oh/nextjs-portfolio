@@ -62,7 +62,7 @@ const Item: FunctionComponent<{
             whileHover={{ scale: 1.05 }}
             className="relative bg-white shadow-lg cursor-pointer rounded-2xl"
         >
-            <div className="w-full h-full" onClick={handlerOnClick}>
+            <div onClick={handlerOnClick} className={"w-full h-full " + (articleData.moreContentType === "soon" ? "opacity-50" : "")} >
                 <div className="relative w-full h-64 overflow-hidden bg-gray-300 rounded-t-2xl">
                     <img src={articleData.imgUrl} className="object-cover w-full h-full" />
                     <p className="absolute bottom-0.5 flex flex-wrap p-1 text-xs text-white max-w-max">
@@ -77,15 +77,16 @@ const Item: FunctionComponent<{
                 </div>
                 {articleData.onlySupportLanguages && <LanguageSupport languages={articleData.onlySupportLanguages} />}
                 <div className="px-5 py-1 mb-10">
-                    <p className="mb-2 text-lg font-bold">{i18nData(articleData.title_i18n)}</p>
+                    <p className={"mb-2 text-lg font-bold"}>{i18nData(articleData.title_i18n)}</p>
                     <p className="pb-5 mb-3 text-sm text-gray-500">{i18nData(articleData.text_i18n)}</p>
                 </div>
                 <div className="absolute bottom-0 w-full px-5">
                     <div className="flex items-center justify-between py-3 border-t-2">
                         <p className="text-xs">{articleData.date}</p>
-                        <button className="px-5 py-1 text-white bg-blue-500 rounded-full">
+                        <button className={"px-5 py-1 text-white rounded-full " + (articleData.moreContentType === "soon" ? "bg-gray-500" : "bg-blue-500")}>
                             {articleData.moreContentType === "modal" && "read more"}
                             {articleData.moreContentType === "url" && "open url"}
+                            {articleData.moreContentType === "soon" && "comming soon"}
                         </button>
                     </div>
                 </div>
