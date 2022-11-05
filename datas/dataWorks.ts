@@ -11,6 +11,30 @@ import { I_Article } from "./types/I_Article";
 
 export const dataWorks: I_Article[] = [
     {
+        imgUrl: "/img/works/ise_dx.jpg",
+        categories: [
+            "Industry Domain",
+            "Full-stack Web Developer",
+            "Project Leader",
+            "System(Requirement) Engineer/Advisor",
+            "Tech Advisor/Trainer",
+            "Back-end",
+            "Front-end",
+        ],
+        title_i18n: {
+            ja: "[IBMJ Systems Engineering] Develop Software and Service for Digital Trasformation, Advanced Technology",
+            ko: "[IBMJ Systems Engineering] Develop Software and Service for Digital Trasformation, Advanced Technology",
+            en: "[IBMJ Systems Engineering] Develop Software and Service for Digital Trasformation, Advanced Technology",
+        },
+        text_i18n: {
+            ja: "Comming soon...",
+            ko: "Comming soon...",
+            en: `Comming soon...`,
+        },
+        date: "2022.8 ~ present",
+        moreContentType: "soon",
+    },
+    {
         imgUrl: "/img/works/hapitas1.jpeg",
         categories: [
             "point-income",
@@ -33,9 +57,8 @@ export const dataWorks: I_Article[] = [
             ko: "프로젝트 리더, 아키텍트, 리드 엔지니어로써, 자사서비스인 어필리에이트 포인트 서비스의 개발을 수행. T-POINT, PayPay, JAL mileage bank, dPOINT등 다수의 외부서비스 연계 및 통합 프로젝트를 주도...",
             en: `develop in-house point-income servcie.\nas P.L & architect & lead engineer, do integration various external services like T-POINT, PayPay, JAL mileage bank, dPOINT...`,
         },
-        date: "2018.1 ~ present",
+        date: "2018.1 ~ 2022.7",
         moreContentType: "modal",
-        moreContentModalComponent: WorksOzvisionHapitas,
     },
     {
         imgUrl: "/img/works/hapitascomic.jpeg",
