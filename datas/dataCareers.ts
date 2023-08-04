@@ -37,8 +37,8 @@ export const dataCarrers: I_struct[] = [
             en: "lead architecture on service, software as cheif",
         },
         period: "on Future",
-        title: "To the Cheif Service Architect",
-        categories: ["Cheif Service Architect", "Cheif Back-end Engineer", "Information Architect", "Tech Leader"],
+        title: "To the Cheif Service/Software Architect",
+        categories: ["Cheif Service/Software Architect", "Cheif Back-end Engineer", "Information Architect", "Tech Leader"],
         where: "finding the chance",
         whereUrl: null,
         country: "global",
@@ -62,7 +62,7 @@ export const dataCarrers: I_struct[] = [
                 ja: "サービス開発においての技術をリード",
                 ko: "서비스개발에 대한 기술을 주도",
                 en: "to lead technology on service development",
-            },
+            }
         ],
         styleSet: {
             contentStyle: { background: "linear-gradient(29deg, rgb(255 231 128) 0%, rgb(255 146 146) 100%)" },
