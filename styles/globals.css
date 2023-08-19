@@ -17,6 +17,7 @@ a {
 
 * {
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 p {
@@ -98,4 +99,61 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+/* -- Resume Print Layout -- */
+.resume-book {
+  margin: 0;
+  padding: 0;
+  /* background-color: #fafafa; */
+  font-size: 12pt;
+}
+
+.resume-page {
+  display: block;
+  width: 21cm;
+  height: 29.7cm;
+  margin: 0cm auto;
+  border: 1px #d3d3d3 solid;
+  border-radius: 5px;
+  overflow: hidden;
+  /* background: white; */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.resume-subpage {
+  margin: 0cm;
+  width: 21cm;
+  height: 29.7cm;
+  overflow: hidden;
+  outline: 0cm #fafafa solid;
+}
+
+.resume-nav {
+  width: 100%;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  .resume-page {
+    margin: 0;
+    border: initial;
+    border-radius: initial;
+    width: initial;
+    min-height: initial;
+    box-shadow: initial;
+    background: initial;
+    page-break-after: none;
+  }
+  .resume-nav {
+    display: none;
+  }
+
+  .resume-top-pad {
+    padding-bottom: 0;
+  }
 }
