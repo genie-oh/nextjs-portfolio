@@ -1,10 +1,23 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import i18nData from "../../i18n/i18nData";
 
 import { languageList } from "../../datas/languageList";
 
+import {
+  MdOutlineMonitor,
+  MdOutlineStar,
+  MdAssignmentInd,
+  MdWork,
+  MdAutoGraph,
+  MdArticle,
+  MdContactMail,
+} from "react-icons/md";
+
 const Top = () => {
+  const router = useRouter();
+
   return (
     <>
       {/* i18n change link */}
@@ -23,18 +36,30 @@ const Top = () => {
       {/* top contents */}
       <div className="relative flex flex-col justify-start h-full pt-12 text-center xl:pt-40 xl:pl-10 xl:text-left xl:justify-center">
         <div className="z-10">
-          <h1 className="mb-5 text-2xl font-bold md:text-5xl md:mb-10">
-            No Pain. No Gain. <br /> Well Service Architecture
+          <h1 className="mb-3 text-2xl font-bold md:text-4xl md:mb-4">
+            No Pain. No Gain. <br /> Well Service & Application Architecture
           </h1>
-          <h2 className="mb-3 text-lg font-semibold md:text-3xl md:mb-5">
+          <h2 className="mb-3 text-xl font-semibold md:text-2xl md:mb-4">
             This is Portfolio of a web engineer
           </h2>
-          <p className="px-10 text-sm whitespace-pre-wrap md:px-0 md:text-xl">
+          <p className="px-10 mb-4 text-sm whitespace-pre-wrap md:px-0 md:text-lg md:mb-4">
             {i18nData({
               ja: "こんにちは！私、Genie. OHと申します。\nシニア・バックエンドエンジニア・ミドルフルスタックエンジニアとして\nサービスアーキテクチャーに強い興味を持っております。",
               ko: "반갑습니다! 저는 Genie. OH라고 합니다.\n시니어 백엔드 엔지니어 및 미들 풀스텍 엔지니어로써\n서비스 아키텍처에 큰 관심을 가지고 있습니다.",
               en: "Hello, I’m Genie, OH.\nI’m a senior back-end web engineer and middle full-stack engineer\nhaving interest of service architecture.",
             })}
+          </p>
+
+          <p>
+            <Link href="./resume">
+              <button className="px-16 py-1 text-lg text-white bg-blue-900 rounded-lg">
+                {i18nData({
+                  ja: "履歴書を先に見る",
+                  ko: "이력서를 먼저 열람하고 싶어요",
+                  en: "Read My Resume",
+                })}
+              </button>
+            </Link>
           </p>
         </div>
 
@@ -44,14 +69,20 @@ const Top = () => {
 
         <div className="absolute right-0 z-50 w-16 p-2 text-center bg-white bottom-5 xl:relative xl:mt-20 rounded-l-2xl xl:bg-opacity-100 xl:w-72 xl:rounded-2xl">
           <div className="flex flex-col items-center justify-center mx-auto mb-2 xl:flex-row">
-            <img className="w-8 m-2 xl:w-12" src="/img/common/logo_ts.svg" />
-            <img className="w-8 m-2 xl:w-12" src="/img/common/logo_react.svg" />
             <img
-              className="w-8 m-2 xl:w-12"
+              className="w-6 mx-2 my-1 xl:w-8"
+              src="/img/common/logo_ts.svg"
+            />
+            <img
+              className="w-6 mx-2 my-1 xl:w-8"
+              src="/img/common/logo_react.svg"
+            />
+            <img
+              className="w-6 mx-2 my-1 xl:w-8"
               src="/img/common/logo_nextjs.svg"
             />
             <img
-              className="w-8 m-2 xl:w-12"
+              className="w-6 mx-2 my-1 xl:w-8"
               src="/img/common/logo_tailwind.svg"
             />
           </div>
