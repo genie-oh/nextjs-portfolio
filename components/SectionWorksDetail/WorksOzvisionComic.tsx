@@ -521,22 +521,12 @@ const WorksOzvisionComic = () => {
 
       <div className="mb-5">
         {i18nData({
-          ja: (
-            <p>
-              ※
-              以下のイメージは、会社の所有物で会うため、詳細内容は見えないように処理を行なっておりますので、ご了承いただけると幸いです。
-            </p>
-          ),
-          ko: (
-            <p>
-              ※ 이하 이미지는 회사의 소유이기 떄문에 상세 내용은 보이지 않도록
-              처리되어 있으므로 양해 부탁드립니다.
-            </p>
-          ),
+          ja: <p>※ 以下の画像は、理解を補助するための仮のものです。</p>,
+          ko: <p>※ 이하의 이미지는 이해를 돕기 위한 가상의 이미지입니다.</p>,
           en: (
             <p>
-              ※ please notice that below images are hidden because assets is
-              owned by company.
+              ※ The following image is a temporary one, provided to aid in
+              understanding.
             </p>
           ),
         })}
