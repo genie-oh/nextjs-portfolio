@@ -112,7 +112,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .resume-page {
   display: block;
   width: 21cm;
-  height: 29.7cm;
+  height: 29.65cm;
   margin: 0cm auto;
   border: 1px #d3d3d3 solid;
   border-radius: 5px;
@@ -124,7 +124,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .resume-subpage {
   margin: 0cm;
   width: 21cm;
-  height: 29.7cm;
+  height: 29.65cm;
   overflow: hidden;
   outline: 0cm #fafafa solid;
 }
