@@ -1,4 +1,5 @@
 import i18nData from "../../i18n/i18nData";
+import QuoteAttention from "../CommonParts/QuoteAttention";
 import ColumnUpLabel from "./Parts/ColumnUpLabel";
 import { Head1 } from "./Parts/Head1";
 import LeftBorderList from "./Parts/LeftBorderList";
@@ -520,16 +521,7 @@ const WorksOzvisionComic = () => {
       </Head1>
 
       <div className="mb-5">
-        {i18nData({
-          ja: <p>※ 以下の画像は、理解を補助するための仮のものです。</p>,
-          ko: <p>※ 이하의 이미지는 이해를 돕기 위한 가상의 이미지입니다.</p>,
-          en: (
-            <p>
-              ※ The following image is a temporary one, provided to aid in
-              understanding.
-            </p>
-          ),
-        })}
+        <QuoteAttention/>
       </div>
 
       <div className="grid items-center justify-center grid-cols-4 gap-1">

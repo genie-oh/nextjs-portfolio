@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import i18nData from "../../../i18n/i18nData";
+import QuoteAttention from "../../CommonParts/QuoteAttention";
 
 type CvQuoteData = {
   title: string;
@@ -21,13 +22,7 @@ const CvQuote: FunctionComponent<{
               en: "Quoting a part of the output about achievements",
             })}
           </div>
-          <div className="text-gray-500">
-            {i18nData({
-              ja: "※ 以下の画像は、理解を補助するための仮のものです。",
-              ko: "※ 이하의 이미지는 이해를 돕기 위한 가상의 이미지입니다.",
-              en: "※ The following image is a temporary one, provided to aid inunderstanding.",
-            })}
-          </div>
+          <QuoteAttention/>
         </div>
 
         <div
