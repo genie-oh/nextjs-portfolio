@@ -100,7 +100,7 @@ export const dataResumeWorkExperiences: ExperiencesDatas[] = [
   },
   {
     company:
-      "OZVISION inc. / In-house, PointSite, WebComic / 2022. 8 ~ NOW, Japan",
+      "OZVISION inc. / In-house, PointSite, WebComic / 2018.1 ~ 2022.7, Japan",
     role: "Full-stack Web Engineer, Lead Engineer",
     items: [
       {
@@ -162,7 +162,7 @@ export const dataResumeWorkExperiences: ExperiencesDatas[] = [
     ],
   },
   {
-    company: "DANAL inc. / In-house, Payment Gateway / 2022. 8 ~ NOW, Korea",
+    company: "DANAL inc. / In-house, Payment Gateway / 2013.1 ~ 2017.9, Korea",
     role: "Backend Engineer, R&D Engineer",
     items: [
       {
