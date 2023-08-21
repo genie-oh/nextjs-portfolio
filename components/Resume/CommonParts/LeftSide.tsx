@@ -1,21 +1,14 @@
 import { FunctionComponent } from "react";
 
 import { CgWebsite } from "react-icons/cg";
-import { MdOutgoingMail, MdPhoneForwarded } from "react-icons/md";
 import { SiWebmoney, SiLinkedin } from "react-icons/si";
 import i18nData from "../../../i18n/i18nData";
+import { calculateYearsAgo } from "../../../utils/date_util";
 
 const LeftSide: FunctionComponent<{
   label: string;
   colorClName: string;
 }> = ({ label, colorClName }) => {
-  const calculateYearsAgo = (givenDate: Date) => {
-    var diff_ms = Date.now() - givenDate.getTime();
-    var age_dt = new Date(diff_ms);
-
-    return Math.abs(age_dt.getUTCFullYear() - 1970);
-  };
-
   return (
     <div
       className="col-span-3 text-xs bg-gray-200 border-l-4 border-white"
