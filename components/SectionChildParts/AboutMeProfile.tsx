@@ -41,7 +41,7 @@ const AboutMeProfile = () => {
             Senior back-end engineer
           </p>
           <p className="mb-5 text-xl text-yellow-500 ">
-            Middle web service architect / full-stack engineer
+            Middle full-stack engineer
           </p>
         </div>
         <div className="p-5 mb-5 bg-gray-100 rounded-2xl">
