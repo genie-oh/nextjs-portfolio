@@ -15,7 +15,7 @@ const Educations = () => {
               <span className="pr-1">
                 <IoIosSchool />
               </span>
-              University of Dongseo (Korea)
+              University of Dongseo (Korea) / 2004.2 ~ 2012.8 (included absence for 4yrs.)
             </time>
             <h3 className="text-xs italic font-semibold text-gray-900 underline dark:text-white">
               {i18nData({
