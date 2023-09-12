@@ -127,7 +127,7 @@ const CV_6: FunctionComponent<{}> = () => {
             }),
           },
           {
-            period: "2023.9 ~ 2023.11",
+            period: "2022.9 ~ 2022.12",
             title: i18nData({
               ja: "科学関連企業様、原料管理・検索・可視化システムPoC開発\n&データ設計、運用整備(Node.js, PostgreSQL)",
               ko: "과학 관련 기업 고객을 위한 원재료 관리, 검색, 시각화 시스템 PoC 개발\n&데이터 설계, 운영 준비(Node.js, PostgreSQL)",
@@ -160,7 +160,7 @@ const CV_6: FunctionComponent<{}> = () => {
             }),
           },
           {
-            period: "2023.1 ~ 2023.3",
+            period: "2022.8 ~ 2022.9",
             title: i18nData({
               ja: "新人研修ハッカソンにおいてのWebApplication開発ガイドをリード (Node.js, Docker)",
               ko: "신입 교육 해커톤에서 웹 애플리케이션 개발 가이드를 리드 (Node.js, Docker)",
