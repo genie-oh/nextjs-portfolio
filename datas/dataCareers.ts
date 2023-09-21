@@ -89,7 +89,7 @@ export const dataCarrers: I_struct[] = [
       en: "Next Innovation with Our Technical Vitality",
     },
     period: "2022.8 - present",
-    title: "Advisory IT Specialist / Web Engineer",
+    title: "Lead Web Engineer / Advisory",
     categories: [
       "Full-stack Web Developer",
       "Project Leader",
@@ -129,7 +129,7 @@ export const dataCarrers: I_struct[] = [
       en: "Point Income/Affiliate Service having over 3 milion users",
     },
     period: "2020.1 - 2022.7",
-    title: "Full-Range Role Engineer",
+    title: "Lead Engineer",
     categories: [
       "Team SubLeader",
       "Project Leader",
@@ -315,7 +315,7 @@ export const dataCarrers: I_struct[] = [
       en: "patent about sending user input data by secure encoding between end-point",
     },
     period: "2014.1 - 2015.1",
-    title: "Middleware Engineer",
+    title: "Middleware / R&D Engineer",
     categories: [
       "Patent Project Leader",
       "Middleware Solution Engineer",

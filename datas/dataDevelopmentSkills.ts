@@ -29,6 +29,20 @@ export const dataDevelopmentSkills: I_Skills[] = [
     iconComponent: SiNodedotjs,
   },
   {
+    percent: 90,
+    title_i18n: {
+      ja: "TypeScript, JavaScript",
+      ko: "TypeScript, JavaScript",
+      en: "TypeScript, JavaScript",
+    },
+    text_i18n: {
+      ja: "ECMA6, ECMA5の詳細仕様とコアメカニズムに対する知識を含め、TypeScriptとJavaScript言語の知識を持っております。",
+      ko: "ECMA6, ECMA5 상세 사양과 핵심 메커니즘에 대한 지식과 함께 TypeScript와 JavaScript언어의 지식을 보유하고 있습니다.",
+      en: "Having knowledge about TypeScript and JavaScript with some ECMA6 and ECMA5 specification and core mechanism.",
+    },
+    iconComponent: SiJavascript,
+  },
+  {
     percent: 70,
     title_i18n: {
       ja: "MySQL",
@@ -43,21 +57,7 @@ export const dataDevelopmentSkills: I_Skills[] = [
     iconComponent: SiMysql,
   },
   {
-    percent: 70,
-    title_i18n: {
-      ja: "TypeScript, JavaScript",
-      ko: "TypeScript, JavaScript",
-      en: "TypeScript, JavaScript",
-    },
-    text_i18n: {
-      ja: "ECMA6, ECMA5の詳細仕様とコアメカニズムに対する知識を含め、TypeScriptとJavaScript言語の知識を持っております。",
-      ko: "ECMA6, ECMA5 상세 사양과 핵심 메커니즘에 대한 지식과 함께 TypeScript와 JavaScript언어의 지식을 보유하고 있습니다.",
-      en: "Having knowledge about TypeScript and JavaScript with some ECMA6 and ECMA5 specification and core mechanism.",
-    },
-    iconComponent: SiJavascript,
-  },
-  {
-    percent: 90,
+    percent: 80,
     title_i18n: {
       ja: "PHP",
       ko: "PHP",
@@ -99,7 +99,7 @@ export const dataDevelopmentSkills: I_Skills[] = [
     iconComponent: SiTailwindcss,
   },
   {
-    percent: 40,
+    percent: 60,
     title_i18n: {
       ja: "Java",
       ko: "Java",
@@ -113,7 +113,7 @@ export const dataDevelopmentSkills: I_Skills[] = [
     iconComponent: SiJava,
   },
   {
-    percent: 30,
+    percent: 50,
     title_i18n: {
       ja: "Python",
       ko: "Python",
@@ -155,11 +155,11 @@ export const dataDevelopmentSkills: I_Skills[] = [
     iconComponent: SiDocker,
   },
   {
-    percent: 25,
+    percent: 30,
     title_i18n: {
-      ja: "Amazon Web Service",
-      ko: "Amazon Web Service",
-      en: "Amazon Web Service",
+      ja: "AWS for DevOps",
+      ko: "AWS for DevOps",
+      en: "AWS for DevOps",
     },
     text_i18n: {
       ja: "擬本的なEC2、S3、ELB、CloudFront、EBSなど、一部の知識を持っております。現在スキルアップのため、学習を続けております。",
