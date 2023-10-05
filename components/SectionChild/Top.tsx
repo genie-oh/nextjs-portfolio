@@ -11,7 +11,7 @@ const Top = () => {
   return (
     <>
       {/* i18n change link */}
-      <div className="absolute top-0 left-0 flex items-center justify-end w-full h-10 bg-black lg:h-12 lg:justify-center bg-opacity-10">
+      <div className="absolute top-0 left-0 z-50 flex items-center justify-end w-full h-10 bg-black bg-opacity-50 lg:h-12 lg:justify-center">
         {languageList.map((item, idx) => {
           return (
             <Link key={idx} href="./" locale={item.locale}>
@@ -26,13 +26,13 @@ const Top = () => {
       {/* top contents */}
       <div className="relative flex flex-col justify-start h-full pt-12 text-center xl:pt-40 xl:pl-10 xl:text-left xl:justify-center">
         <div className="z-10">
-          <h1 className="mb-3 text-2xl font-bold md:text-4xl md:mb-4">
+          <h1 className="mb-3 text-2xl font-bold xl:text-4xl xl:mb-4">
             No Pain. No Gain. <br /> Well Service & Application Architecture
           </h1>
-          <h2 className="mb-3 text-xl font-semibold md:text-2xl md:mb-4">
+          <h2 className="mb-3 text-xl font-semibold xl:text-2xl xl:mb-4">
             This is Portfolio of a web engineer
           </h2>
-          <p className="px-10 mb-4 text-sm whitespace-pre-wrap md:px-0 md:text-lg md:mb-4">
+          <p className="px-10 mb-4 text-sm whitespace-pre-wrap xl:px-0 xl:text-lg xl:mb-4">
             {i18nData({
               ja: "こんにちは！私、Genie. OHと申します。\nシニア・バックエンドエンジニア・ミドルフルスタックエンジニアとして\nサービスアーキテクチャーに強い興味を持っております。",
               ko: "반갑습니다! 저는 Genie. OH라고 합니다.\n시니어 백엔드 엔지니어 및 미들 풀스텍 엔지니어로써\n서비스 아키텍처에 큰 관심을 가지고 있습니다.",
@@ -42,7 +42,7 @@ const Top = () => {
 
           <p>
             <Link href="./resume">
-              <button className="px-2 py-2 m-2 text-2xl text-white whitespace-pre-wrap bg-blue-900 rounded-lg md:px-16 md:whitespace-nowrap hover:bg-blue-700">
+              <button className="px-2 py-2 m-2 text-white whitespace-pre-wrap bg-blue-900 rounded-lg xl:text-2xl md:px-16 md:whitespace-nowrap hover:bg-blue-700">
                 <span className="">
                   {i18nData({
                     ja: "履歴書と職務経歴書を先に見たい方はこちら",
@@ -55,8 +55,12 @@ const Top = () => {
           </p>
         </div>
 
-        <div className="absolute top-0 z-0 flex items-end justify-center w-full h-screen -left-12 xl:left-0 xl:justify-end">
-          <img className="xl:my-32 h-1/2 xl:h-4/6" src="/img/common/top.svg" />
+        <div className="absolute top-0 z-0 flex items-end justify-center w-full h-screen xl:left-0 xl:justify-end">
+          {/* <img className="xl:my-32 h-1/2 xl:h-4/6" src="/img/common/top.svg" /> */}
+          <img
+            className="mb-10 h-1/2 md:h-2/3 xl:mb-48 xl:h-5/6"
+            src="/img/top.webp"
+          />
         </div>
 
         <div className="absolute right-0 z-50 w-16 p-2 text-center bg-white bottom-5 xl:relative xl:mt-20 rounded-l-2xl xl:bg-opacity-100 xl:w-72 xl:rounded-2xl">
