@@ -19,7 +19,7 @@ export default function Home() {
   const [blurClass, updateBlurClass] = useState("");
 
   const HomeContextFunctions: { scrollTo: Function } = (function (
-    updateBlurClass,
+    updateBlurClass
   ) {
     function toggleBlur(blur: boolean) {
       blur ? updateBlurClass("blur-md") : updateBlurClass("");
@@ -46,8 +46,7 @@ export default function Home() {
   })(updateBlurClass);
 
   const styleSectionTop = {
-    background:
-      "linear-gradient(29deg, rgba(249,86,179,1) 0%, rgba(240,111,76,1) 100%)",
+    background: "rgb(253, 234, 205)",
   };
   const styleSectionA = { background: "#FFD000" };
   const styleSectionB = { background: "#FFEFCA" };
