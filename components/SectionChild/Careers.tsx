@@ -132,7 +132,7 @@ const Careers = () => {
                 <ul className="px-5 list-disc">
                   {item.textlist_i18n.map((text_i18n, idx) => {
                     return (
-                      <li key={idx} className="mb-1">
+                      <li key={idx} className="mb-1 whitespace-pre-wrap">
                         {i18nData(text_i18n)}
                       </li>
                     );
