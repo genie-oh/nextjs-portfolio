@@ -2,6 +2,7 @@ import WorksDanalBackend from "../components/SectionWorksDetail/WorksDanalBacken
 import WorksDanalCaptcha from "../components/SectionWorksDetail/WorksDanalCaptcha";
 import WorksDanalKeyboard from "../components/SectionWorksDetail/WorksDanalKeyboard";
 import WorksDanalWeb from "../components/SectionWorksDetail/WorksDanalWeb";
+import WorksISE from "../components/SectionWorksDetail/WorksISE";
 import WorksOzvisionComic from "../components/SectionWorksDetail/WorksOzvisionComic";
 import WorksOzvisionHapitas from "../components/SectionWorksDetail/WorksOzvisionHapitas";
 import WorksUnivNetflow from "../components/SectionWorksDetail/WorksUnivNetflow";
@@ -11,10 +12,30 @@ import { I_Article } from "./types/I_Article";
 
 export const dataWorks: I_Article[] = [
   {
+    imgUrl: "/img/works/ldi.jpg",
+    categories: [
+      "Server-Side Engineer",
+      "Full-stack Web Engineer",
+      "Playing Manager",
+    ],
+    title_i18n: {
+      ja: "[Lawson Digital Innovation] Lawson Mobile App / Server-Side",
+      ko: "[Lawson Digital Innovation] Lawson Mobile App / Server-Side",
+      en: "[Lawson Digital Innovation] Lawson Mobile App / Server-Side",
+    },
+    text_i18n: {
+      ja: "coming soon...",
+      ko: "coming soon...",
+      en: `coming soon...`,
+    },
+    date: "2024.2 ~ NOW",
+    moreContentType: "soon",
+  },
+  {
     imgUrl: "/img/works/ise_dx.jpg",
     categories: [
       "Industry Domain",
-      "Full-stack Web Developer",
+      "Full-stack Web Engineer",
       "Project Leader",
       "System(Requirement) Engineer/Advisor",
       "Tech Advisor/Trainer",
@@ -27,12 +48,13 @@ export const dataWorks: I_Article[] = [
       en: "[IBMJ Systems Engineering] Develop Software and Service for Digital Trasformation, Advanced Technology",
     },
     text_i18n: {
-      ja: "Comming soon...",
-      ko: "Comming soon...",
-      en: `Comming soon...`,
+      ja: "「IBM Japan Systems Engineering / Sier, DX」で「Full-stack Web EngineerおよびLead Application Engineer」として働いています。",
+      ko: "IBM Japan Systems Engineering에서 풀스택 웹엔지니어와 리드 어플리케이션 엔지니어로써 업무를 담당하였습니다.",
+      en: `At "IBM Japan Systems Engineering / Sier, DX", I worked as a "Full-stack Web Engineer and Lead Application Engineer" .`,
     },
-    date: "2022.8 ~ present",
-    moreContentType: "soon",
+    date: "2022.8 ~ 2024.1",
+    moreContentType: "modal",
+    moreContentModalComponent: WorksISE,
   },
   {
     imgUrl: "/img/works/hapitas1.jpeg",

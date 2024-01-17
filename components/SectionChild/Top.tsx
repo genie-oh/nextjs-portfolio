@@ -39,20 +39,6 @@ const Top = () => {
               en: "Hello, I’m Genie, OH.\nI’m a senior back-end web engineer and middle full-stack engineer\nhaving interest of service architecture.",
             })}
           </p>
-
-          <p>
-            <Link href="./resume">
-              <button className="px-2 py-2 m-2 text-white whitespace-pre-wrap bg-blue-900 rounded-lg xl:text-2xl md:px-16 md:whitespace-nowrap hover:bg-blue-700">
-                <span className="">
-                  {i18nData({
-                    ja: "履歴書と職務経歴書を先に見たい方はこちら",
-                    ko: "이력서와 경력기술서를 \n먼저 열람하고 싶어요",
-                    en: "Read My Resume and CV \nat first",
-                  })}
-                </span>
-              </button>
-            </Link>
-          </p>
         </div>
 
         <div className="absolute top-0 z-0 flex items-end justify-center w-full h-screen xl:left-0 xl:justify-end">

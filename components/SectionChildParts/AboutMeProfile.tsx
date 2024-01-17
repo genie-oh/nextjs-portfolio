@@ -40,8 +40,11 @@ const AboutMeProfile = () => {
           <p className="mb-1 text-xl text-yellow-500 ">
             Senior back-end engineer
           </p>
-          <p className="mb-5 text-xl text-yellow-500 ">
+          <p className="mb-1 text-xl text-yellow-500 ">
             Middle full-stack engineer
+          </p>
+          <p className="mb-5 text-xl text-yellow-500 ">
+            Product developer
           </p>
         </div>
         <div className="p-5 mb-5 bg-gray-100 rounded-2xl">

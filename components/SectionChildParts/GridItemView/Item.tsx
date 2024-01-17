@@ -110,7 +110,7 @@ const Item: FunctionComponent<{
             >
               {articleData.moreContentType === "modal" && "read more"}
               {articleData.moreContentType === "url" && "open url"}
-              {articleData.moreContentType === "soon" && "comming soon"}
+              {articleData.moreContentType === "soon" && "coming soon"}
             </button>
           </div>
         </div>

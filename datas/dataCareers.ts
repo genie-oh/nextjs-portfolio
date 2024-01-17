@@ -80,6 +80,39 @@ export const dataCarrers: I_struct[] = [
   },
   {
     iconComponent: MdWork,
+    imgUrl: "/img/careers/ldi.jpg",
+    imgTitle:
+      "to grow of Lawson Mobile App",
+    imgText_i18n: {
+      ja: "coming soon...",
+      ko: "coming soon...",
+      en: "coming soon...",
+    },
+    period: "2024.2 - NOW",
+    title: "Server-Side Engineer / Playing Manager",
+    categories: [
+      "Server-Side Engineer",
+      "Full-stack Web Engineer",
+      "Playing Manager",
+    ],
+    where: "Lawson Digital Innovation Co., Ltd.",
+    whereUrl: "https://www.ldi.co.jp/",
+    country: "japan",
+    textlist_i18n: [
+      {
+        ja: "coming soon...\n\n\n\n\n\n",
+        ko: "coming soon...",
+        en: "coming soon...",
+      },
+    ],
+    styleSet: {
+      contentStyle: null,
+      contentArrowStyle: null,
+      iconStyle: { background: "rgba(5, 150, 105, 1)", color: "#fff" },
+    },
+  },
+  {
+    iconComponent: MdWork,
     imgUrl: "/img/careers/ise2.png",
     imgTitle:
       "Software and Service for Digital Trasformation, Advanced Technology",
@@ -88,10 +121,10 @@ export const dataCarrers: I_struct[] = [
       ko: "Next Innovation with Our Technical Vitality",
       en: "Next Innovation with Our Technical Vitality",
     },
-    period: "2022.8 - present",
+    period: "2022.8 - 2024.1",
     title: "Lead Web Engineer / Advisory",
     categories: [
-      "Full-stack Web Developer",
+      "Full-stack Web Engineer",
       "Project Leader",
       "System(Requirement) Engineer/Advisor",
       "Tech Advisor/Trainer",
