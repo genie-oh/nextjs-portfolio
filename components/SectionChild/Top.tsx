@@ -24,12 +24,12 @@ const Top = () => {
       </div>
 
       {/* top contents */}
-      <div className="relative flex flex-col justify-start h-full pt-12 text-center xl:pt-40 xl:pl-10 xl:text-left xl:justify-center">
+      <div className="relative flex flex-col justify-start h-full pt-20 text-center xl:pt-30 xl:pl-10 xl:text-left xl:justify-center">
         <div className="z-10">
-          <h1 className="mb-3 text-2xl font-bold xl:text-4xl xl:mb-4">
+          <h1 className="mb-3 text-2xl font-bold xl:text-4xl xl:mb-5">
             No Pain. No Gain. <br /> Well Service & Application Architecture
           </h1>
-          <h2 className="mb-3 text-xl font-semibold xl:text-2xl xl:mb-4">
+          <h2 className="mb-3 text-xl font-semibold xl:text-2xl xl:mb-5">
             This is Portfolio of a web engineer
           </h2>
           <p className="px-10 mb-4 text-sm whitespace-pre-wrap xl:px-0 xl:text-lg xl:mb-4">
