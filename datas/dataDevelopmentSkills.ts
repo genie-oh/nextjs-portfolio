@@ -1,46 +1,46 @@
 import { I_Skills } from "./types/I_Skills";
 import {
   SiAmazonaws,
-  SiDocker,
+  SiGo,
   SiHtml5,
   SiJava,
-  SiJavascript,
   SiMysql,
   SiNodedotjs,
   SiPhp,
   SiPython,
   SiReact,
   SiTailwindcss,
+  SiTypescript,
 } from "react-icons/si";
 
 export const dataDevelopmentSkills: I_Skills[] = [
   {
     percent: 90,
     title_i18n: {
-      ja: "Node.js",
-      ko: "Node.js",
-      en: "Node.js",
+      ja: "Go",
+      ko: "Go",
+      en: "Go",
     },
     text_i18n: {
-      ja: "Nodejs & Typescript基盤でのExpress, NestJSなどのフレームワークを使ったエンタープライズ・ウェブサービス開発を主力スキルとして保有しています。",
-      ko: "Nodejs & Typescript기반과 Express, NestJS등의 프레임워크를 이용한 엔터프라이즈 웹서비스 개발을 주력 스킬로 보유하고 있습니다.",
-      en: "It's my currently main skill that developing enterprise web service on Nodejs & Typescript environment with Express, NestJS.",
+      ja: "2024年から主力言語として磨いていきます。Go, Gin, Gorm, Sqlx, gRPC, Asynqなどを活かしたバックエンド開発を試みています。",
+      ko: "2024부터 주력 언어로써 정진하고 있습니다. Go, Gin, Gorm, Sqlx, gRPC, Asynq 등을 활용한 백엔드 개발을 해나가려고 합니다.",
+      en: "Using as Main Skill at 2024, Try to back-end development with Go, Gin, Gorm, Sqlx, gPRC, Asynq.",
     },
-    iconComponent: SiNodedotjs,
+    iconComponent: SiGo,
   },
   {
-    percent: 90,
+    percent: 80,
     title_i18n: {
-      ja: "TypeScript, JavaScript",
-      ko: "TypeScript, JavaScript",
-      en: "TypeScript, JavaScript",
+      ja: "Java",
+      ko: "Java",
+      en: "Java",
     },
     text_i18n: {
-      ja: "ECMA6, ECMA5の詳細仕様とコアメカニズムに対する知識を含め、TypeScriptとJavaScript言語の知識を持っております。",
-      ko: "ECMA6, ECMA5 상세 사양과 핵심 메커니즘에 대한 지식과 함께 TypeScript와 JavaScript언어의 지식을 보유하고 있습니다.",
-      en: "Having knowledge about TypeScript and JavaScript with some ECMA6 and ECMA5 specification and core mechanism.",
+      ja: "2024年からまた主力言語として磨いていきます。前までは、決済代行サービスの開発業務の中で２年の間、Java開発を経験しておりました。Java言語コンセプト、JVM、OOPコンセプトに対しては、強い関心を持っております。",
+      ko: "2024년부터 다시금 주력 언어로써 정진하고 있습니다. 이전에는 결제대행서비스 개발 업무에서 2년 동안 Java개발을 경험하였습니다. Java언어 컨셉, JVM, OOP 컨셉에 대해서는 큰 관심을 가지고 있습니다.",
+      en: "Using as Main Skill at 2024, At past, I had experience on Java language for 2 years at payment gateway servcie. i have a interest about Java language, JVM, OOP concept on Java.",
     },
-    iconComponent: SiJavascript,
+    iconComponent: SiJava,
   },
   {
     percent: 70,
@@ -57,18 +57,46 @@ export const dataDevelopmentSkills: I_Skills[] = [
     iconComponent: SiMysql,
   },
   {
-    percent: 80,
+    percent: 50,
     title_i18n: {
-      ja: "PHP",
-      ko: "PHP",
-      en: "PHP",
+      ja: "AWS for DevOps",
+      ko: "AWS for DevOps",
+      en: "AWS for DevOps",
     },
     text_i18n: {
-      ja: "PHPの深い理解を持ち、Laravel, Symfony, Codeigniterなど、多様なフレームワークでのウェブサービス開発経験があります。",
-      ko: "PHP에대한 깊은 이해와 함께, Laravel, Symfony, Codeigniter등의 다양한 프레임워크로의 웹서비스 개발 경험이 있습니다.",
-      en: "Having deepened as skill about PHP core and some framework which are Laravel, Symfony, Codeigniter, etc. Additionally, I have wide experience about developing web services using it.",
+      ja: "Cognito, API Gateway, Lambda, S3, CloudFrontなどを活用したアプリケーション設計と開発スキルを持っております。CI/CD、EKS、またはEBへのサービス構築への基礎的な知識を持っております。現在スキルアップのため、学習を続けております。",
+      ko: "Cognito, API Gateway, Lambda, S3, CloudFront등을 활용한 어플리케이션의 설계 및 개발 스킬을 보유하고 있습니다. CI/CD, EKS 또는 EB 서비스 구축에 대한 기초적인 지식을 가지고 있습니다. 현재 스킬업을 위해 노력중입니다.",
+      en: "Have application design and development skills using Cognito, API Gateway, Lambda, S3, CloudFront, etc. additionally, have basic skills of building services for CI/CD, EKS or EB. I am learning it to skill up.",
     },
-    iconComponent: SiPhp,
+    iconComponent: SiAmazonaws,
+  },
+  {
+    percent: 90,
+    title_i18n: {
+      ja: "TypeScript, JavaScript",
+      ko: "TypeScript, JavaScript",
+      en: "TypeScript, JavaScript",
+    },
+    text_i18n: {
+      ja: "ECMA6, ECMA5の詳細仕様とコアメカニズムに対する知識を含め、TypeScriptとJavaScript言語の知識を持っております。",
+      ko: "ECMA6, ECMA5 상세 사양과 핵심 메커니즘에 대한 지식과 함께 TypeScript와 JavaScript언어의 지식을 보유하고 있습니다.",
+      en: "Having knowledge about TypeScript and JavaScript with some ECMA6 and ECMA5 specification and core mechanism.",
+    },
+    iconComponent: SiTypescript,
+  },
+  {
+    percent: 90,
+    title_i18n: {
+      ja: "Node.js",
+      ko: "Node.js",
+      en: "Node.js",
+    },
+    text_i18n: {
+      ja: "Nodejs & Typescript基盤でのExpress, NestJSなどのフレームワークを使ったエンタープライズ・ウェブサービス開発を主力スキルとして保有しています。",
+      ko: "Nodejs & Typescript기반과 Express, NestJS등의 프레임워크를 이용한 엔터프라이즈 웹서비스 개발을 주력 스킬로 보유하고 있습니다.",
+      en: "It's my currently main skill that developing enterprise web service on Nodejs & Typescript environment with Express, NestJS.",
+    },
+    iconComponent: SiNodedotjs,
   },
   {
     percent: 60,
@@ -99,18 +127,18 @@ export const dataDevelopmentSkills: I_Skills[] = [
     iconComponent: SiTailwindcss,
   },
   {
-    percent: 60,
+    percent: 80,
     title_i18n: {
-      ja: "Java",
-      ko: "Java",
-      en: "Java",
+      ja: "PHP",
+      ko: "PHP",
+      en: "PHP",
     },
     text_i18n: {
-      ja: "決済代行サービスの開発業務の中で、２年の間、Java開発を経験しておりました。現在はメインスキルではないですが、Java言語コンセプト、JVM、OOPコンセプトに対しては、強い関心を持っております。",
-      ko: "결제대행서비스 개발 업무에서 2년 동안 Java개발을 경험하였습니다. 현재는 주 스킬이 아니지만 Java언어 컨셉, JVM, OOP 컨셉에 대해서는 큰 관심을 가지고 있습니다.",
-      en: "Having experience on Java language for 2 years at payment gateway servcie. it's not main skill, but i have a interest about Java language, JVM, OOP concept on Java.",
+      ja: "PHPの深い理解を持ち、Laravel, Symfony, Codeigniterなど、多様なフレームワークでのウェブサービス開発経験があります。",
+      ko: "PHP에대한 깊은 이해와 함께, Laravel, Symfony, Codeigniter등의 다양한 프레임워크로의 웹서비스 개발 경험이 있습니다.",
+      en: "Having deepened as skill about PHP core and some framework which are Laravel, Symfony, Codeigniter, etc. Additionally, I have wide experience about developing web services using it.",
     },
-    iconComponent: SiJava,
+    iconComponent: SiPhp,
   },
   {
     percent: 50,
@@ -139,33 +167,5 @@ export const dataDevelopmentSkills: I_Skills[] = [
       en: "Having purely HTML, CSS skills and experience development using it.",
     },
     iconComponent: SiHtml5,
-  },
-  {
-    percent: 50,
-    title_i18n: {
-      ja: "Docker",
-      ko: "Docker",
-      en: "Docker",
-    },
-    text_i18n: {
-      ja: "Dockerを利用し、ウェブアプリケーションと複数のミドルウェアの複合環境を構成しサービスを構築できるスキルを保有しています。",
-      ko: "Docker를 이용하여 웹어플리케이션과 다양한 미들웨어의 복합 환경을 구성하여 서비스를 구축할 수 있는 스킬을 보유하고 있습니다.",
-      en: "Having Docker skills to build Composed-Environment-Service with web application and several middleware.",
-    },
-    iconComponent: SiDocker,
-  },
-  {
-    percent: 30,
-    title_i18n: {
-      ja: "AWS for DevOps",
-      ko: "AWS for DevOps",
-      en: "AWS for DevOps",
-    },
-    text_i18n: {
-      ja: "擬本的なEC2、S3、ELB、CloudFront、EBSなど、一部の知識を持っております。現在スキルアップのため、学習を続けております。",
-      ko: "기본적인EC2, S3, ELB, CloudFront, EBS같은, 일부분의 지식을 보유하고 있습니다. 현재 스킬업을 위해 학습을 수행하고 있습니다.",
-      en: "Having a little bit about it like EC2, S3, ELB, CloudFront, EBS basically. I am learning it to skill up.",
-    },
-    iconComponent: SiAmazonaws,
   },
 ];
