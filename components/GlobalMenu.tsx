@@ -39,17 +39,6 @@ export const GlobalMenu = () => {
       <div className="bg-black opacity-60 rounded-2xl bm-burger-button-bg"></div>
       <Menu pageWrapId={"page-wrap"} outerContainerId={"outer-container"}>
         <div className="absolute top-0 w-full h-full overflow-y-auto">
-          {/* Resume */}
-          <div className="mx-8 mt-10">
-            <p className="font-bold">Resume</p>
-            <Link href="./resume">
-              <button className="flex items-center justify-start w-full p-2 my-3 text-black transform bg-gray-300 cursor-pointer rounded-xl menu-item hover:scale-110 hover:bg-white">
-                <BiUserCheck fontSize={24} />
-                <span className="pl-3">Read Resume/CV</span>
-              </button>
-            </Link>
-          </div>
-
           {/* Menu */}
           <div className="mx-8 mt-10">
             <p className="font-bold">Menu</p>
